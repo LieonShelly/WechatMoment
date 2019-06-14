@@ -1,0 +1,64 @@
+# 如果需要添加某一个类库，放开注释执行 carthage update --platform iOS，更新完请将注释加回去
+
+# git "ssh://git@git.qukanshu.com/ios/PKHUD.git" ~> 1.0.0
+
+# git "file:///Users/lieon/Desktop/CompanyProjects/Arab/Carthage/Checkouts/PKHUD"
+
+# git@github.com:ReactiveX/RxSwift.git
+# github "ReactiveX/RxSwift" ~> 4.0
+
+# git@github.com:RxSwiftCommunity/RxDataSources.git
+# github "RxSwiftCommunity/RxDataSources"
+
+# git@github.com:RxSwiftCommunity/Action.git
+# github "RxSwiftCommunity/Action" ~> 3.6.0
+
+# git@github.com:RxSwiftCommunity/RxRealm.git
+# github "RxSwiftCommunity/RxRealm"
+
+# git@github.com:RxSwiftCommunity/RxSwiftExt.git
+# github "RxSwiftCommunity/RxSwiftExt"
+
+# git@github.com:RxSwiftCommunity/RxSwiftUtilities.git
+# github "RxSwiftCommunity/RxSwiftUtilities"
+
+# git@github.com:Juanpe/SkeletonView.git
+# github "Juanpe/SkeletonView"
+
+# git@github.com:Moya/Moya.git
+# github "Moya/Moya"
+
+# git@github.com:alibaba/HandyJSON.git
+# github "alibaba/HandyJSON"
+
+# git@github.com:onevcat/Kingfisher.git
+#  github "onevcat/Kingfisher"
+
+# git@github.com:realm/realm-cocoa.git
+
+# github "realm/realm-cocoa"
+
+# github "SnapKit/SnapKit" ~> 4.0.0
+
+# github "WenchaoD/FSPagerView"
+
+# git@github.com:maxep/MXParallaxHeader.git
+
+# github "maxep/MXParallaxHeader"
+
+# git@github.com:aschuch/StatefulViewController.git
+
+# github "aschuch/StatefulViewController" ~> 3.0"
+
+# git@github.com:AlexLittlejohn/ALCameraViewController.git
+
+# github "alexlittlejohn/ALCameraViewController"
+
+# github "ElaWorkshop/TagListView" ~> 1.0
+
+# github "krzyzanowskim/CryptoSwift"
+
+# github "MortimerGoro/MGSwipeTableCell"
+
+
+
