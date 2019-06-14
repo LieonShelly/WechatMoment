@@ -44,7 +44,10 @@ class HomeViewModel {
                     .asObservable()
                     .trackActivity(activity)
             }
-            .debug()
+            .map({ (serverData) -> [Tweet] in
+                let normalData = serverData.filter { $0.error == nil}.filter { $0.unknownError == nil}
+                return normalData
+            })
             .bind(to: tweetList)
             .disposed(by: bag)
         

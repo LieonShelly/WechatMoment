@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class HomeViewController: UIViewController {
     let bag = DisposeBag()
@@ -48,6 +49,35 @@ class HomeViewController: UIViewController {
             .skip(1)
             .bind(to: headerView.rx.userProfile)
             .disposed(by: bag)
+    
+        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Tweet>>(
+            configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+                if item.content != nil, item.images != nil {
+                    let cell = tableView.dequeueCell(TweetTableViewCell.self, for: indexPath)
+                    cell.config(item)
+                     return cell
+                } else if item.content != nil, item.images == nil {
+                    let cell = tableView.dequeueCell(TweetTableViewOnlyTextCell.self, for: indexPath)
+                    cell.config(item)
+                     return cell
+                } else if item.content == nil, item.images != nil {
+                    let cell = tableView.dequeueCell(TweetTableViewOnlyImageCell.self, for: indexPath)
+                    cell.config(item)
+                    return cell
+                } else if item.content == nil, item.images == nil, item.sender != nil {
+                    let cell = tableView.dequeueCell(TweetTableViewOnlySenderCell.self, for: indexPath)
+                    cell.config(item)
+                    return cell
+                }
+                let defaultCell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
+                defaultCell.contentView.backgroundColor = UIColor.red
+                return defaultCell
+            }
+        )
+        
+        viewModel.sectionDataDriver
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: bag)
     }
     
     
@@ -57,11 +87,16 @@ class HomeViewController: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        
+        tableView.delegate = self
         let headerViewContainer = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UISize.headerHeight))
         headerView.frame = headerViewContainer.bounds
         headerViewContainer.addSubview(headerView)
         tableView.tableHeaderView = headerViewContainer
+        tableView.registerNibWithCell(TweetTableViewCell.self)
+        tableView.registerClassWithCell(UITableViewCell.self)
+        tableView.registerNibWithCell(TweetTableViewOnlyImageCell.self)
+        tableView.registerNibWithCell(TweetTableViewOnlyTextCell.self)
+        tableView.registerNibWithCell(TweetTableViewOnlySenderCell.self)
         
     }
     
@@ -70,4 +105,10 @@ class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
