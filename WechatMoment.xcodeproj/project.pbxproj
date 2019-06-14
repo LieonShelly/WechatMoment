@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF24022B3A4CC005DB838 /* HomeViewController.swift */; };
 		CD1BF24322B3A4CC005DB838 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1BF24122B3A4CC005DB838 /* HomeViewController.xib */; };
-		CD1BF24E22B3A627005DB838 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF24C22B3A627005DB838 /* ErrorTracker.swift */; };
-		CD1BF24F22B3A627005DB838 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF24D22B3A627005DB838 /* ActivityIndicator.swift */; };
-		CD1BF25122B3A64A005DB838 /* Response+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25022B3A64A005DB838 /* Response+Rx.swift */; };
 		CD1BF25822B3A696005DB838 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25422B3A696005DB838 /* CommonData.swift */; };
 		CD1BF25922B3A696005DB838 /* AppResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25522B3A696005DB838 /* AppResponse.swift */; };
 		CD1BF25A22B3A696005DB838 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25622B3A696005DB838 /* SectionModel.swift */; };
@@ -19,6 +16,12 @@
 		CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25C22B3A82F005DB838 /* HomeViewModel.swift */; };
 		CD1BF26022B3A876005DB838 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25F22B3A876005DB838 /* Service.swift */; };
 		CD1BF26222B3A9FF005DB838 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF26122B3A9FF005DB838 /* Home.swift */; };
+		CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */; };
+		CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */; };
+		CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */; };
+		CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */; };
+		CD33A48D22B3F1F900B3B28D /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A48B22B3F1F900B3B28D /* HomeHeaderView.xib */; };
+		CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48C22B3F1F900B3B28D /* HomeHeaderView.swift */; };
 		CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD635D7822B39FB000D0069E /* AppDelegate.swift */; };
 		CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD635D7F22B39FB300D0069E /* Assets.xcassets */; };
 		CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD635D8122B39FB300D0069E /* LaunchScreen.storyboard */; };
@@ -55,9 +58,6 @@
 /* Begin PBXFileReference section */
 		CD1BF24022B3A4CC005DB838 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CD1BF24122B3A4CC005DB838 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		CD1BF24C22B3A627005DB838 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTracker.swift; path = ../../../../../CompanyProjects/PeasNovel/PeasNovel/PeasNovel/Vender/Rx/ErrorTracker.swift; sourceTree = "<group>"; };
-		CD1BF24D22B3A627005DB838 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = ../../../../../CompanyProjects/PeasNovel/PeasNovel/PeasNovel/Vender/Rx/ActivityIndicator.swift; sourceTree = "<group>"; };
-		CD1BF25022B3A64A005DB838 /* Response+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Rx.swift"; sourceTree = "<group>"; };
 		CD1BF25422B3A696005DB838 /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
 		CD1BF25522B3A696005DB838 /* AppResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppResponse.swift; sourceTree = "<group>"; };
 		CD1BF25622B3A696005DB838 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
@@ -65,6 +65,12 @@
 		CD1BF25C22B3A82F005DB838 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CD1BF25F22B3A876005DB838 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CD1BF26122B3A9FF005DB838 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Rx.swift"; sourceTree = "<group>"; };
+		CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ex.swift"; sourceTree = "<group>"; };
+		CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		CD33A48B22B3F1F900B3B28D /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		CD33A48C22B3F1F900B3B28D /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		CD635D7522B39FAF00D0069E /* WechatMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD635D7822B39FB000D0069E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD635D7F22B39FB300D0069E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		CD1BF24522B3A563005DB838 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CD33A48A22B3F1F900B3B28D /* View */,
 				CD1BF24822B3A581005DB838 /* Model */,
 				CD1BF24722B3A573005DB838 /* Contoller */,
 				CD1BF24422B3A559005DB838 /* ViewModel */,
@@ -195,9 +202,10 @@
 		CD1BF24B22B3A614005DB838 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
-				CD1BF24D22B3A627005DB838 /* ActivityIndicator.swift */,
-				CD1BF24C22B3A627005DB838 /* ErrorTracker.swift */,
-				CD1BF25022B3A64A005DB838 /* Response+Rx.swift */,
+				CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */,
+				CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */,
+				CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */,
+				CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -227,6 +235,15 @@
 				CD1BF25F22B3A876005DB838 /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		CD33A48A22B3F1F900B3B28D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD33A48B22B3F1F900B3B28D /* HomeHeaderView.xib */,
+				CD33A48C22B3F1F900B3B28D /* HomeHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CD635D6C22B39FAF00D0069E = {
@@ -353,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD33A48D22B3F1F900B3B28D /* HomeHeaderView.xib in Resources */,
 				CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */,
 				CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */,
 				CD1BF24322B3A4CC005DB838 /* HomeViewController.xib in Resources */,
@@ -417,18 +435,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1BF24F22B3A627005DB838 /* ActivityIndicator.swift in Sources */,
 				CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */,
+				CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */,
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
 				CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */,
+				CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */,
+				CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */,
+				CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */,
 				CD1BF25922B3A696005DB838 /* AppResponse.swift in Sources */,
 				CD1BF25A22B3A696005DB838 /* SectionModel.swift in Sources */,
 				CD1BF25822B3A696005DB838 /* CommonData.swift in Sources */,
-				CD1BF24E22B3A627005DB838 /* ErrorTracker.swift in Sources */,
 				CD1BF26022B3A876005DB838 /* Service.swift in Sources */,
 				CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */,
+				CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */,
 				CD1BF26222B3A9FF005DB838 /* Home.swift in Sources */,
-				CD1BF25122B3A64A005DB838 /* Response+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +599,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WechatMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,7 +620,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WechatMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

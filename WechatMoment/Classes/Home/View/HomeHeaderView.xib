@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeHeaderView" customModule="WechatMoment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="382"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u3g-i1-NBn">
+                    <rect key="frame" x="0.0" y="0.0" width="364" height="362"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dy5-vf-WYi">
+                    <rect key="frame" x="289" y="322" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FZ4-yT-DSw"/>
+                        <constraint firstAttribute="width" constant="60" id="bqW-vD-98Z"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-dy-HB5">
+                    <rect key="frame" x="20" y="331" width="269" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u3g-i1-NBn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7uf-UY-MEw"/>
+                <constraint firstItem="Dy5-vf-WYi" firstAttribute="leading" secondItem="nlZ-dy-HB5" secondAttribute="trailing" id="DM2-Te-nBk"/>
+                <constraint firstAttribute="trailing" secondItem="u3g-i1-NBn" secondAttribute="trailing" id="HwN-bR-LG5"/>
+                <constraint firstAttribute="trailing" secondItem="Dy5-vf-WYi" secondAttribute="trailing" constant="15" id="JFi-s2-Lcx"/>
+                <constraint firstItem="nlZ-dy-HB5" firstAttribute="bottom" secondItem="u3g-i1-NBn" secondAttribute="bottom" constant="-10" id="P5L-XJ-GcV"/>
+                <constraint firstItem="u3g-i1-NBn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VgS-et-qoe"/>
+                <constraint firstAttribute="bottom" secondItem="Dy5-vf-WYi" secondAttribute="bottom" id="ZAv-tL-Rhq"/>
+                <constraint firstItem="nlZ-dy-HB5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="hJ5-p5-AJg"/>
+                <constraint firstAttribute="bottom" secondItem="u3g-i1-NBn" secondAttribute="bottom" constant="20" id="iES-kz-oLV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="u3g-i1-NBn" id="k2l-Im-g0S"/>
+                <outlet property="iconView" destination="Dy5-vf-WYi" id="W7j-YG-HXG"/>
+                <outlet property="nameLabel" destination="nlZ-dy-HB5" id="LKN-Ng-unS"/>
+            </connections>
+            <point key="canvasLocation" x="129.59999999999999" y="26.086956521739133"/>
+        </view>
+    </objects>
+</document>
