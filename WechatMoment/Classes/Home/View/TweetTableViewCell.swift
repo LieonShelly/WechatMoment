@@ -9,7 +9,7 @@
 import UIKit
 
 class TweetTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageContainer: UIView!
+    @IBOutlet weak var imageContainer: ImageListView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
@@ -31,5 +31,15 @@ class TweetTableViewCell: UITableViewCell {
         }
         nameLabel.text = model.sender?.nick
         contentLabel.text = model.content
+        let urlStrs = model.images?.map { $0.url ?? ""}
+        let urls = urlStrs?.map { URL(string: $0)}
+        var newURLs: [URL] = []
+        if let urls = urls {
+            for url in urls  where url != nil {
+                newURLs.append(url!)
+            }
+        }
+        imageContainer.config(newURLs)
+        
     }
 }
