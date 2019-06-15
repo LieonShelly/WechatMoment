@@ -130,11 +130,12 @@ extension ImageListView {
             } else {
                 imgScrollView.updateRect()
             }
-            var offset = imageBrowser.scrollView.contentOffset
-            offset.x = CGFloat(index) * UIScreen.main.bounds.width
-            imageBrowser.scrollView.contentOffset = offset
-            
+          
         }
+        var offset = imageBrowser.scrollView.contentOffset
+        offset.x = CGFloat(imageViewIndex) * UIScreen.main.bounds.width
+        imageBrowser.scrollView.contentOffset = offset
+        
     }
     
     fileprivate func imgdidSingleTap(_ scrollView: ImageScrollView) {
@@ -154,7 +155,6 @@ extension ImageListView {
 
 @IBDesignable
 class CanTapImageView: UIImageView {
-    
     var didTap: ((CanTapImageView) -> Void)?
     
     override init(frame: CGRect) {
@@ -166,7 +166,6 @@ class CanTapImageView: UIImageView {
         super.init(coder: aDecoder)
         setupUI()
     }
-    
     
     fileprivate func setupUI() {
         backgroundColor = UIColor.lightGray
