@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageBrowser: UIView {
-
+    
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
@@ -66,6 +66,7 @@ class ImageScrollView: UIScrollView {
     var didSingleTap: ((ImageScrollView) -> Void)?
     var didlongPress: ((ImageScrollView) -> Void)?
     var originRect: CGRect?
+    var contentRect: CGRect = .zero
     
     fileprivate lazy var iamgeView: UIImageView = {
         let iamgeView = UIImageView()
@@ -92,6 +93,7 @@ class ImageScrollView: UIScrollView {
     }
     
     func configContentRect(_ contentRect: CGRect) {
+        self.contentRect = contentRect
         iamgeView.frame = contentRect
     }
     
@@ -109,6 +111,7 @@ class ImageScrollView: UIScrollView {
             let imgViewHeight = picSize.height * scaleX
             self.maximumZoomScale = self.frame.size.height / imgViewHeight
             self.originRect = CGRect(x: 0, y: self.frame.size.height / 2 - imgViewHeight / 2, width: self.frame.size.width, height: imgViewHeight)
+            self.zoomScale = 1.0
         }
         
         UIView.animate(withDuration: 0.25) {
@@ -125,6 +128,7 @@ class ImageScrollView: UIScrollView {
         minimumZoomScale = 1.0
         bouncesZoom = false
         delegate = self
+        zoomScale = 1
         addSubview(iamgeView)
         let doubletap = UITapGestureRecognizer()
         doubletap.addTarget(self, action: #selector(self.doubletapAction(_:)))
@@ -166,7 +170,7 @@ extension ImageScrollView: UIScrollViewDelegate {
 extension ImageScrollView {
     @objc fileprivate func doubletapAction( _ ges: UITapGestureRecognizer) {
         var cuurentZoomScale = self.zoomScale
-        if cuurentZoomScale == minimumZoomScale {
+        if cuurentZoomScale == maximumZoomScale {
             cuurentZoomScale = 0
         } else {
             cuurentZoomScale = maximumZoomScale

@@ -114,8 +114,8 @@ extension ImageListView {
             imgScrollView.maximumZoomScale = 2
             imgScrollView.configImage(perImageView.image)
             imgScrollView.configContentRect(convertRect ?? .zero)
-            imgScrollView.didSingleTap  = { currentSv in
-                
+            imgScrollView.didSingleTap  = {[weak self] currentSv in
+                self?.imgdidSingleTap(currentSv)
             }
             imgScrollView.didlongPress  = { currentSv in
                 
@@ -134,6 +134,19 @@ extension ImageListView {
             offset.x = CGFloat(index) * UIScreen.main.bounds.width
             imageBrowser.scrollView.contentOffset = offset
             
+        }
+    }
+    
+    fileprivate func imgdidSingleTap(_ scrollView: ImageScrollView) {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.imageBrowser.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+            self.imageBrowser.pageControl.isHidden = true
+            scrollView.configContentRect(scrollView.contentRect)
+            scrollView.zoomScale = 1.0
+        }) { (flag) in
+            if flag {
+               self.imageBrowser.removeFromSuperview()
+            }
         }
     }
 }
