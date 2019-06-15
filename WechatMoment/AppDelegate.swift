@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: HomeViewController(HomeViewModel()))
         window?.makeKeyAndVisible()
+        // 屏蔽控制台autolayout约束内容的输出
+        UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
     }
     
 
