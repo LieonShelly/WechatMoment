@@ -14,7 +14,7 @@ import RxDataSources
 class HomeViewController: UIViewController {
     let bag = DisposeBag()
     @IBOutlet weak var tableView: UITableView!
-    
+    let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
     struct UISize {
         static let headerHeight: CGFloat = 667 * 0.5
         
@@ -78,6 +78,12 @@ class HomeViewController: UIViewController {
         viewModel.sectionDataDriver
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
+        
+        viewModel.tweetList
+            .asObservable()
+            .bind(to: tweetList)
+            .disposed(by: bag)
+        
     }
     
     
@@ -88,6 +94,7 @@ class HomeViewController: UIViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
         tableView.delegate = self
+        tableView.estimatedRowHeight = 100
         let headerViewContainer = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UISize.headerHeight))
         headerView.frame = headerViewContainer.bounds
         headerViewContainer.addSubview(headerView)
@@ -109,6 +116,10 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        let cacheHeight = tweetList.value[indexPath.row].rowHegight
+        if cacheHeight > 0 {
+           return cacheHeight
+        }
+       return UITableView.automaticDimension
     }
 }

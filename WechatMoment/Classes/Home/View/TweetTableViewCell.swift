@@ -9,10 +9,12 @@
 import UIKit
 
 class TweetTableViewCell: UITableViewCell {
+    @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var imageContainer: ImageListView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    var tweet: Tweet?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +23,7 @@ class TweetTableViewCell: UITableViewCell {
     }
     
     func config(_ model: Tweet) {
+        tweet = model
         if let iconUrl = URL(string: model.sender?.avatar ?? "") {
             iconView.kf.setImage(with: iconUrl, options: [                                                .transition(.fade(1)),
                                                                                                               .cacheOriginalImage], completionHandler: { (result) in
@@ -40,6 +43,12 @@ class TweetTableViewCell: UITableViewCell {
             }
         }
         imageContainer.config(newURLs)
-        
+        imageHeight.constant = imageContainer.frame.height
+        let currentRowHeight =  imageContainer.frame.maxY + 10
+        if self.tweet?.rowHegight != currentRowHeight {
+            self.tweet?.rowHegight = imageContainer.frame.maxY + 10
+            layoutIfNeeded()
+        }
+     
     }
 }

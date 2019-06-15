@@ -6,6 +6,7 @@
 //  Copyright © 2019 lieon. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import HandyJSON
 
@@ -39,7 +40,7 @@ struct Tweet: HandyJSON {
     var images: [ImageModel]?
     var error: String?
     var unknownError: String?
-    
+    var rowHegight: CGFloat = 0
     
     mutating func mapping(mapper: HelpingMapper) {
         mapper <<<

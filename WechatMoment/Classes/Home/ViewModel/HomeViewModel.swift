@@ -21,11 +21,13 @@ class HomeViewModel {
     /// output
     let userProfileOutput: BehaviorRelay<UserProfile> = BehaviorRelay(value: UserProfile())
     let sectionDataDriver: Driver<[SectionModel<String, Tweet>]>
+    let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
+    
     init() {
         let provider = MoyaProvider<HomeService>()
         let activity = ActivityIndicator()
-        let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
-            
+      
+        
         viewDidLoad.asObservable()
             .flatMap { _ in
                 provider.rx.request(.userProfile)
