@@ -10,10 +10,11 @@ import UIKit
 
 class TweetTableViewOnlyImageCell: UITableViewCell {
 
-    @IBOutlet weak var imageContainer: UIView!
+    @IBOutlet weak var imageContainer: ImageListView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentView: UITableView!
+     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,19 @@ class TweetTableViewOnlyImageCell: UITableViewCell {
             iconView.image = nil
         }
         nameLabel.text = model.sender?.nick
+        let urlStrs = model.images?.map { $0.url ?? ""}
+        let urls = urlStrs?.map { URL(string: $0)}
+        var newURLs: [URL] = []
+        if let urls = urls {
+            for url in urls  where url != nil {
+                newURLs.append(url!)
+            }
+        }
+        imageContainer.config(newURLs)
+        imageHeight.constant = imageContainer.frame.height
+        /// FIXME: 缓存行高 
+        let currentRowHeight =  imageContainer.frame.maxY + 10
+        layoutIfNeeded()
         
     }
 
