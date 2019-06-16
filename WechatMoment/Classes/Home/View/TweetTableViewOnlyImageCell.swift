@@ -13,8 +13,10 @@ class TweetTableViewOnlyImageCell: UITableViewCell {
     @IBOutlet weak var imageContainer: ImageListView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var commentView: UITableView!
-     @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentView: CommentView!
+    var tweet: Tweet?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +25,7 @@ class TweetTableViewOnlyImageCell: UITableViewCell {
     }
     
     func config(_ model: Tweet) {
+         tweet = model
         if let iconUrl = URL(string: model.sender?.avatar ?? "") {
             iconView.kf.setImage(with: iconUrl, options: [                                                .transition(.fade(1)),
                                                                                                           .cacheOriginalImage], completionHandler: { (result) in
@@ -43,8 +46,18 @@ class TweetTableViewOnlyImageCell: UITableViewCell {
         imageContainer.config(newURLs)
         imageHeight.constant = imageContainer.frame.height
         /// FIXME: 缓存行高 
-        let currentRowHeight =  imageContainer.frame.maxY + 10
-        layoutIfNeeded()
+        var currentRowHeight =  imageContainer.frame.maxY + 10
+        if let commets = model.comments {
+            commentView.configData(commets)
+            commentHeight.constant = commentView.frame.size.height
+            currentRowHeight =  commentView.frame.maxY + 10
+        } else {
+            commentHeight.constant = 0
+        }
+        if currentRowHeight != model.rowHegight {
+            tweet?.rowHegight = currentRowHeight
+            layoutIfNeeded()
+        }
         
     }
 

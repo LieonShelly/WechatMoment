@@ -13,7 +13,9 @@ class TweetTableViewOnlySenderCell: UITableViewCell {
 
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var commentHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentView: CommentView!
+    var tweet: Tweet?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,7 @@ class TweetTableViewOnlySenderCell: UITableViewCell {
     }
     
     func config(_ model: Tweet) {
+        tweet = model
         if let iconUrl = URL(string: model.sender?.avatar ?? "") {
             iconView.kf.setImage(with: iconUrl, options: [                                                .transition(.fade(1)),
                                                                                                           .cacheOriginalImage], completionHandler: { (result) in
@@ -31,6 +34,16 @@ class TweetTableViewOnlySenderCell: UITableViewCell {
             iconView.image = nil
         }
         nameLabel.text = model.sender?.nick
+        var currentRowHeight =  nameLabel.frame.maxY + 10
+        if let commets = model.comments {
+            commentView.configData(commets)
+            commentHeight.constant = commentView.frame.size.height
+            currentRowHeight =  commentView.frame.maxY + 10
+        } else {
+            commentHeight.constant = 0
+        }
+        tweet?.rowHegight = currentRowHeight
+        layoutIfNeeded()
         
     }
 }

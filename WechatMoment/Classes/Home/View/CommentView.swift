@@ -23,11 +23,13 @@ class CommentView: UIView {
         tableView.isScrollEnabled = false
         tableView.separatorStyle = .none
         tableView.separatorColor = UIColor.clear
+        tableView.isHidden = true
         return tableView
     }()
     fileprivate lazy var bgView: UIImageView = {
         let bgView = UIImageView()
         bgView.image = UIImage(named: "comment_bg")?.stretchableImage(withLeftCapWidth: 40, topCapHeight: Int(UISize.bgHeight))
+        bgView.isHidden = true
         return bgView
     }()
     
@@ -58,6 +60,8 @@ class CommentView: UIView {
     }
     
     func configData(_ data: [CommentData]) {
+        bgView.isHidden = data.isEmpty
+        tableView.isHidden = data.isEmpty
         datas = data
         let sizeResult = CommentView.caculateSize(data)
         rowHeights = sizeResult.0

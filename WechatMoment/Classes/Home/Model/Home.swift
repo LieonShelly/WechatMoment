@@ -47,11 +47,18 @@ struct Tweet: HandyJSON {
             self.unknownError <-- "unknown error"
     }
     
+//    mutating func didFinishMapping() {
+//      self.comments =  [Comment(content: "asdfasdfsdaf", sender: UserProfile(profile_image: nil, avatar: nil, nick: nil, username: "dsasdasd")),
+//         Comment(content: "asdfasdfsdaf", sender: UserProfile(profile_image: nil, avatar: nil, nick: nil, username: "dsasdasd")),
+//         Comment(content: "asdfasdfsdaf", sender: UserProfile(profile_image: nil, avatar: nil, nick: nil, username: "dsasdasd")),
+//         Comment(content: "asdfasdfsdaf", sender: UserProfile(profile_image: nil, avatar: nil, nick: nil, username: "dsasdasd")),
+//         Comment(content: "asdfasdfsdaf", sender: UserProfile(profile_image: nil, avatar: nil, nick: nil, username: "dsasdasd"))]
+//    }
 }
 
 extension Comment: CommentData {
     var contentText: String {
-       return self.content ?? "" 
+       return self.content ?? ""
     }
     
     var username: String {

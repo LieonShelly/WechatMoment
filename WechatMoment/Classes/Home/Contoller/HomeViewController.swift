@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import RxSwiftExt
 
 class HomeViewController: UIViewController {
     let bag = DisposeBag()
@@ -83,7 +84,7 @@ class HomeViewController: UIViewController {
             .asObservable()
             .bind(to: tweetList)
             .disposed(by: bag)
-        
+    
     }
     
     
@@ -116,10 +117,6 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cacheHeight = tweetList.value[indexPath.row].rowHegight
-        if cacheHeight > 0 {
-           return cacheHeight
-        }
        return UITableView.automaticDimension
     }
 }

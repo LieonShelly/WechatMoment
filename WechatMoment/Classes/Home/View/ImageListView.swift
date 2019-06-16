@@ -87,6 +87,26 @@ class ImageListView: UIView {
         }
     }
 
+    static func caculateHeight(_ data: [URL]) -> CGFloat {
+        let imageCount = data.count
+        var frame: CGRect = .zero
+        for index in (0 ..< imageCount) {
+            var rowNum = index / 3
+            var colNum = index % 3
+            if imageCount == 4 {
+                rowNum = index / 2
+                colNum = index % 2
+            }
+            let imageX: CGFloat = CGFloat(colNum) * (UISize.imageWidth + UISize.imagePadding)
+            let imageY: CGFloat = CGFloat(rowNum) * (UISize.imageWidth + UISize.imagePadding)
+            frame = CGRect(x: imageX, y: imageY, width: UISize.imageWidth, height: UISize.imageWidth)
+            if imageCount == 1 {
+                let singleSize = CGSize(width: 100, height: 120) /// 暂时这么写
+                frame = CGRect(x: 0, y: 0, width: singleSize.width, height: singleSize.height)
+            }
+        }
+        return frame.maxY
+    }
 
 
 }

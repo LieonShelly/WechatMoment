@@ -27,23 +27,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULw-k7-VOZ">
-                        <rect key="frame" x="60" y="10" width="38" height="18"/>
+                        <rect key="frame" x="60" y="10" width="38" height="484"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.33725490200000002" green="0.4039215686" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8E-vk-tEZ" customClass="ImageListView" customModule="WechatMoment" customModuleProvider="target">
-                        <rect key="frame" x="60" y="33" width="606" height="0.0"/>
+                        <rect key="frame" x="60" y="499" width="606" height="0.0"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" id="zUz-bJ-F18"/>
                         </constraints>
                     </view>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-gR-I85">
-                        <rect key="frame" x="60" y="43" width="606" height="466.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tableView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-TX-Zh3">
                         <rect key="frame" x="0.0" y="519" width="676" height="0.5"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,20 +47,27 @@
                             <constraint firstAttribute="height" constant="0.5" id="iM2-Gg-EqK"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-IQ-6mH" customClass="CommentView" customModule="WechatMoment" customModuleProvider="target">
+                        <rect key="frame" x="60" y="509" width="606" height="0.0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="0TG-AI-Kf6"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="B8E-vk-tEZ" firstAttribute="leading" secondItem="ULw-k7-VOZ" secondAttribute="leading" id="1Z1-77-hOe"/>
-                    <constraint firstAttribute="bottom" secondItem="bhF-gR-I85" secondAttribute="bottom" constant="10" id="4rY-y0-t1h"/>
                     <constraint firstItem="ULw-k7-VOZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7j5-CZ-5MX"/>
-                    <constraint firstItem="bhF-gR-I85" firstAttribute="trailing" secondItem="B8E-vk-tEZ" secondAttribute="trailing" id="7qg-Ao-lrX"/>
+                    <constraint firstItem="WUx-IQ-6mH" firstAttribute="top" secondItem="B8E-vk-tEZ" secondAttribute="bottom" constant="10" id="9vv-X6-Mi4"/>
                     <constraint firstAttribute="bottom" secondItem="N8a-TX-Zh3" secondAttribute="bottom" id="BJ2-Pv-g1g"/>
-                    <constraint firstItem="bhF-gR-I85" firstAttribute="leading" secondItem="B8E-vk-tEZ" secondAttribute="leading" id="Opl-gV-8pl"/>
                     <constraint firstItem="ULw-k7-VOZ" firstAttribute="top" secondItem="uA3-N4-fa8" secondAttribute="top" id="PGC-Sa-ISa"/>
+                    <constraint firstItem="WUx-IQ-6mH" firstAttribute="leading" secondItem="ULw-k7-VOZ" secondAttribute="leading" id="dmf-sl-LSa"/>
                     <constraint firstItem="uA3-N4-fa8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ebU-yM-GIc"/>
                     <constraint firstAttribute="trailing" secondItem="B8E-vk-tEZ" secondAttribute="trailing" constant="10" id="faz-8B-9Vd"/>
-                    <constraint firstItem="bhF-gR-I85" firstAttribute="top" secondItem="B8E-vk-tEZ" secondAttribute="bottom" constant="10" id="fcK-HS-tVO"/>
                     <constraint firstItem="uA3-N4-fa8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="g2L-HB-ovr"/>
                     <constraint firstAttribute="trailing" secondItem="N8a-TX-Zh3" secondAttribute="trailing" id="ikk-NJ-XrS"/>
+                    <constraint firstItem="N8a-TX-Zh3" firstAttribute="top" secondItem="WUx-IQ-6mH" secondAttribute="bottom" constant="10" id="mhN-Dy-0VY"/>
+                    <constraint firstAttribute="trailing" secondItem="WUx-IQ-6mH" secondAttribute="trailing" constant="10" id="mvE-zu-VKg"/>
                     <constraint firstItem="B8E-vk-tEZ" firstAttribute="top" secondItem="ULw-k7-VOZ" secondAttribute="bottom" constant="5" id="qpU-Gr-PxK"/>
                     <constraint firstItem="ULw-k7-VOZ" firstAttribute="leading" secondItem="uA3-N4-fa8" secondAttribute="trailing" constant="10" id="ydP-bA-3t3"/>
                     <constraint firstItem="N8a-TX-Zh3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zgn-ko-gcn"/>
@@ -72,7 +75,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="commentView" destination="bhF-gR-I85" id="Gda-0q-k9C"/>
+                <outlet property="commentHeight" destination="0TG-AI-Kf6" id="PzB-OK-i9J"/>
+                <outlet property="commentView" destination="WUx-IQ-6mH" id="6Gn-BD-1aI"/>
                 <outlet property="iconView" destination="uA3-N4-fa8" id="zC7-39-vQf"/>
                 <outlet property="imageContainer" destination="B8E-vk-tEZ" id="Icf-cd-YFy"/>
                 <outlet property="imageHeight" destination="zUz-bJ-F18" id="7uT-Yu-8gn"/>

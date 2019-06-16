@@ -10,7 +10,7 @@ import UIKit
 // [UIColor colorWithRed:0.28 green:0.35 blue:0.54 alpha:1.0]
 class CommentTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         
