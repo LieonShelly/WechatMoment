@@ -24,7 +24,6 @@
 		CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48C22B3F1F900B3B28D /* HomeHeaderView.swift */; };
 		CD33A49122B3F46700B3B28D /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48F22B3F46700B3B28D /* TweetTableViewCell.swift */; };
 		CD33A49222B3F46700B3B28D /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A49022B3F46700B3B28D /* TweetTableViewCell.xib */; };
-		CD33A49522B3F71400B3B28D /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A49422B3F71400B3B28D /* UITableViewExtension.swift */; };
 		CD33A49822B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A49622B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift */; };
 		CD33A49922B3FA0700B3B28D /* TweetTableViewOnlyImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A49722B3FA0700B3B28D /* TweetTableViewOnlyImageCell.xib */; };
 		CD33A49C22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A49A22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift */; };
@@ -33,17 +32,18 @@
 		CD33A4A322B401E500B3B28D /* TweetTableViewOnlySenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4A122B401E500B3B28D /* TweetTableViewOnlySenderCell.xib */; };
 		CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A422B49B5100B3B28D /* ImageListView.swift */; };
 		CD33A4A722B4C3E400B3B28D /* ImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A622B4C3E400B3B28D /* ImageBrowser.swift */; };
-		CD33A4A922B4C57900B3B28D /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */; };
 		CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4AA22B4EE4400B3B28D /* CommentView.swift */; };
 		CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */; };
 		CD33A4AF22B4EF5D00B3B28D /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */; };
-		CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B022B4F1D900B3B28D /* StringExtension.swift */; };
 		CD33A4B322B6867300B3B28D /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B222B6867300B3B28D /* Refresh.swift */; };
 		CD33A4B622B686B500B3B28D /* RefreshFooterStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4B422B686B500B3B28D /* RefreshFooterStatusView.xib */; };
 		CD33A4B722B686B500B3B28D /* RefreshFooterStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B522B686B500B3B28D /* RefreshFooterStatusView.swift */; };
 		CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD635D7822B39FB000D0069E /* AppDelegate.swift */; };
 		CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD635D7F22B39FB300D0069E /* Assets.xcassets */; };
 		CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD635D8122B39FB300D0069E /* LaunchScreen.storyboard */; };
+		CD7C46C922B6A41500371C77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C622B6A41500371C77 /* UITableViewExtension.swift */; };
+		CD7C46CA22B6A41500371C77 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C722B6A41500371C77 /* UIDeviceExtension.swift */; };
+		CD7C46CB22B6A41500371C77 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C822B6A41500371C77 /* StringExtension.swift */; };
 		CD97939422B3A1BF00E0CEE6 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */; };
 		CD97939522B3A1BF00E0CEE6 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */; };
 		CD97939622B3A1BF00E0CEE6 /* FSPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937622B3A1BE00E0CEE6 /* FSPagerView.framework */; };
@@ -92,7 +92,6 @@
 		CD33A48C22B3F1F900B3B28D /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		CD33A48F22B3F46700B3B28D /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		CD33A49022B3F46700B3B28D /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
-		CD33A49422B3F71400B3B28D /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CD33A49622B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewOnlyImageCell.swift; sourceTree = "<group>"; };
 		CD33A49722B3FA0700B3B28D /* TweetTableViewOnlyImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewOnlyImageCell.xib; sourceTree = "<group>"; };
 		CD33A49A22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewOnlyTextCell.swift; sourceTree = "<group>"; };
@@ -101,11 +100,9 @@
 		CD33A4A122B401E500B3B28D /* TweetTableViewOnlySenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewOnlySenderCell.xib; sourceTree = "<group>"; };
 		CD33A4A422B49B5100B3B28D /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		CD33A4A622B4C3E400B3B28D /* ImageBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBrowser.swift; sourceTree = "<group>"; };
-		CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		CD33A4AA22B4EE4400B3B28D /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
-		CD33A4B022B4F1D900B3B28D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CD33A4B222B6867300B3B28D /* Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
 		CD33A4B422B686B500B3B28D /* RefreshFooterStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshFooterStatusView.xib; sourceTree = "<group>"; };
 		CD33A4B522B686B500B3B28D /* RefreshFooterStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshFooterStatusView.swift; sourceTree = "<group>"; };
@@ -114,6 +111,9 @@
 		CD635D7F22B39FB300D0069E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD635D8222B39FB300D0069E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD635D8422B39FB300D0069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7C46C622B6A41500371C77 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CD7C46C722B6A41500371C77 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		CD7C46C822B6A41500371C77 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
 		CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		CD97937622B3A1BE00E0CEE6 /* FSPagerView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSPagerView.framework; path = Carthage/Build/iOS/FSPagerView.framework; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		CD1BF24922B3A5A5005DB838 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				CD33A49322B3F71400B3B28D /* Extension */,
+				CD7C46C522B6A41500371C77 /* Extension */,
 				CD1BF24B22B3A614005DB838 /* Rx */,
 			);
 			path = Vender;
@@ -301,17 +301,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CD33A49322B3F71400B3B28D /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				CD33A49422B3F71400B3B28D /* UITableViewExtension.swift */,
-				CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */,
-				CD33A4B022B4F1D900B3B28D /* StringExtension.swift */,
-			);
-			name = Extension;
-			path = ../../../Demo/WechatMoment/WechatMoment/Vender/Extension;
-			sourceTree = "<group>";
-		};
 		CD635D6C22B39FAF00D0069E = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +329,16 @@
 				CD635D8422B39FB300D0069E /* Info.plist */,
 			);
 			path = WechatMoment;
+			sourceTree = "<group>";
+		};
+		CD7C46C522B6A41500371C77 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C46C622B6A41500371C77 /* UITableViewExtension.swift */,
+				CD7C46C722B6A41500371C77 /* UIDeviceExtension.swift */,
+				CD7C46C822B6A41500371C77 /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		CD97937322B3A1BE00E0CEE6 /* Frameworks */ = {
@@ -509,14 +508,13 @@
 			files = (
 				CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */,
 				CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */,
+				CD7C46CB22B6A41500371C77 /* StringExtension.swift in Sources */,
 				CD33A49C22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift in Sources */,
 				CD33A49822B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift in Sources */,
 				CD33A4B722B686B500B3B28D /* RefreshFooterStatusView.swift in Sources */,
 				CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */,
 				CD33A4B322B6867300B3B28D /* Refresh.swift in Sources */,
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
-				CD33A49522B3F71400B3B28D /* UITableViewExtension.swift in Sources */,
-				CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */,
 				CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */,
 				CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */,
 				CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */,
@@ -528,12 +526,13 @@
 				CD1BF25822B3A696005DB838 /* CommonData.swift in Sources */,
 				CD33A4A222B401E500B3B28D /* TweetTableViewOnlySenderCell.swift in Sources */,
 				CD1BF26022B3A876005DB838 /* Service.swift in Sources */,
-				CD33A4A922B4C57900B3B28D /* UIDeviceExtension.swift in Sources */,
+				CD7C46CA22B6A41500371C77 /* UIDeviceExtension.swift in Sources */,
 				CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */,
 				CD33A4A722B4C3E400B3B28D /* ImageBrowser.swift in Sources */,
 				CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */,
 				CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */,
 				CD1BF26222B3A9FF005DB838 /* Home.swift in Sources */,
+				CD7C46C922B6A41500371C77 /* UITableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
