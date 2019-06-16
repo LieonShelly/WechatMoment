@@ -80,11 +80,27 @@ class HomeViewController: UIViewController {
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
         
-        viewModel.tweetList
+        viewModel.currentTweetList
             .asObservable()
             .bind(to: tweetList)
             .disposed(by: bag)
+        
+        tableView.mj_header = RefreshHeader(refreshingBlock: {
+            viewModel.refreshInput.on(.next(true))
+        })
     
+        tableView.mj_footer = RefreshFooter(refreshingBlock: {
+            viewModel.refreshInput.on(.next(false))
+        })
+        
+        viewModel.refreshStatus
+            .bind(to: tableView.rx.mj_RefreshStatus)
+            .disposed(by: bag)
+        
+        viewModel.currentTweetList
+            .map { $0.isEmpty}
+            .bind(to: tableView.rx.isHidden)
+            .disposed(by: bag)
     }
     
     

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RefreshFooterStatusView" customModule="PeasNovel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="519" height="89"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUk-wQ-nXy" userLabel="努力加载中…">
+                    <rect key="frame" x="221" y="36.5" width="77" height="16"/>
+                    <string key="text">努力加载中…
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B1J-Ej-SNI">
+                    <rect key="frame" x="191" y="34.5" width="20" height="20"/>
+                    <color key="tintColor" red="0.49800121784210205" green="0.54236429929733276" blue="0.68628615140914917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="hii-BG-gam"/>
+                        <constraint firstAttribute="height" constant="20" id="wT0-gD-m2S"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JUk-wQ-nXy" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EEs-wU-zMg"/>
+                <constraint firstItem="JUk-wQ-nXy" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="K2s-r9-boo"/>
+                <constraint firstItem="JUk-wQ-nXy" firstAttribute="leading" secondItem="B1J-Ej-SNI" secondAttribute="trailing" constant="10" id="OOA-ZH-Xav"/>
+                <constraint firstItem="B1J-Ej-SNI" firstAttribute="centerY" secondItem="JUk-wQ-nXy" secondAttribute="centerY" id="fIJ-Aj-1FY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="B1J-Ej-SNI" id="6FD-po-3d8"/>
+                <outlet property="label" destination="JUk-wQ-nXy" id="F0i-3e-6bl"/>
+            </connections>
+            <point key="canvasLocation" x="106.5" y="-242.5"/>
+        </view>
+    </objects>
+</document>

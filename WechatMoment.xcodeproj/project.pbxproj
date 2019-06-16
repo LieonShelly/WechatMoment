@@ -38,6 +38,9 @@
 		CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */; };
 		CD33A4AF22B4EF5D00B3B28D /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */; };
 		CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B022B4F1D900B3B28D /* StringExtension.swift */; };
+		CD33A4B322B6867300B3B28D /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B222B6867300B3B28D /* Refresh.swift */; };
+		CD33A4B622B686B500B3B28D /* RefreshFooterStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4B422B686B500B3B28D /* RefreshFooterStatusView.xib */; };
+		CD33A4B722B686B500B3B28D /* RefreshFooterStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B522B686B500B3B28D /* RefreshFooterStatusView.swift */; };
 		CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD635D7822B39FB000D0069E /* AppDelegate.swift */; };
 		CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD635D7F22B39FB300D0069E /* Assets.xcassets */; };
 		CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD635D8122B39FB300D0069E /* LaunchScreen.storyboard */; };
@@ -103,6 +106,9 @@
 		CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		CD33A4B022B4F1D900B3B28D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CD33A4B222B6867300B3B28D /* Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
+		CD33A4B422B686B500B3B28D /* RefreshFooterStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshFooterStatusView.xib; sourceTree = "<group>"; };
+		CD33A4B522B686B500B3B28D /* RefreshFooterStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshFooterStatusView.swift; sourceTree = "<group>"; };
 		CD635D7522B39FAF00D0069E /* WechatMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD635D7822B39FB000D0069E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD635D7F22B39FB300D0069E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +252,9 @@
 		CD1BF25222B3A681005DB838 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				CD33A4B522B686B500B3B28D /* RefreshFooterStatusView.swift */,
+				CD33A4B422B686B500B3B28D /* RefreshFooterStatusView.xib */,
+				CD33A4B222B6867300B3B28D /* Refresh.swift */,
 				CD1BF25322B3A696005DB838 /* Model */,
 			);
 			path = Base;
@@ -432,6 +441,7 @@
 				CD33A48D22B3F1F900B3B28D /* HomeHeaderView.xib in Resources */,
 				CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */,
 				CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */,
+				CD33A4B622B686B500B3B28D /* RefreshFooterStatusView.xib in Resources */,
 				CD33A49D22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.xib in Resources */,
 				CD1BF24322B3A4CC005DB838 /* HomeViewController.xib in Resources */,
 				CD33A4AF22B4EF5D00B3B28D /* CommentTableViewCell.xib in Resources */,
@@ -501,7 +511,9 @@
 				CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */,
 				CD33A49C22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift in Sources */,
 				CD33A49822B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift in Sources */,
+				CD33A4B722B686B500B3B28D /* RefreshFooterStatusView.swift in Sources */,
 				CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */,
+				CD33A4B322B6867300B3B28D /* Refresh.swift in Sources */,
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
 				CD33A49522B3F71400B3B28D /* UITableViewExtension.swift in Sources */,
 				CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */,
