@@ -34,6 +34,10 @@
 		CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A422B49B5100B3B28D /* ImageListView.swift */; };
 		CD33A4A722B4C3E400B3B28D /* ImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A622B4C3E400B3B28D /* ImageBrowser.swift */; };
 		CD33A4A922B4C57900B3B28D /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */; };
+		CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4AA22B4EE4400B3B28D /* CommentView.swift */; };
+		CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */; };
+		CD33A4AF22B4EF5D00B3B28D /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */; };
+		CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A4B022B4F1D900B3B28D /* StringExtension.swift */; };
 		CD635D7922B39FB000D0069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD635D7822B39FB000D0069E /* AppDelegate.swift */; };
 		CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD635D7F22B39FB300D0069E /* Assets.xcassets */; };
 		CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD635D8122B39FB300D0069E /* LaunchScreen.storyboard */; };
@@ -95,6 +99,10 @@
 		CD33A4A422B49B5100B3B28D /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		CD33A4A622B4C3E400B3B28D /* ImageBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBrowser.swift; sourceTree = "<group>"; };
 		CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		CD33A4AA22B4EE4400B3B28D /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		CD33A4B022B4F1D900B3B28D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CD635D7522B39FAF00D0069E /* WechatMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD635D7822B39FB000D0069E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD635D7F22B39FB300D0069E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -277,6 +285,9 @@
 				CD33A4A122B401E500B3B28D /* TweetTableViewOnlySenderCell.xib */,
 				CD33A4A422B49B5100B3B28D /* ImageListView.swift */,
 				CD33A4A622B4C3E400B3B28D /* ImageBrowser.swift */,
+				CD33A4AA22B4EE4400B3B28D /* CommentView.swift */,
+				CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */,
+				CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +297,7 @@
 			children = (
 				CD33A49422B3F71400B3B28D /* UITableViewExtension.swift */,
 				CD33A4A822B4C57900B3B28D /* UIDeviceExtension.swift */,
+				CD33A4B022B4F1D900B3B28D /* StringExtension.swift */,
 			);
 			name = Extension;
 			path = ../../../Demo/WechatMoment/WechatMoment/Vender/Extension;
@@ -422,6 +434,7 @@
 				CD635D8022B39FB300D0069E /* Assets.xcassets in Resources */,
 				CD33A49D22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.xib in Resources */,
 				CD1BF24322B3A4CC005DB838 /* HomeViewController.xib in Resources */,
+				CD33A4AF22B4EF5D00B3B28D /* CommentTableViewCell.xib in Resources */,
 				CD33A49922B3FA0700B3B28D /* TweetTableViewOnlyImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,8 +501,10 @@
 				CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */,
 				CD33A49C22B3FC0B00B3B28D /* TweetTableViewOnlyTextCell.swift in Sources */,
 				CD33A49822B3FA0700B3B28D /* TweetTableViewOnlyImageCell.swift in Sources */,
+				CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */,
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
 				CD33A49522B3F71400B3B28D /* UITableViewExtension.swift in Sources */,
+				CD33A4B122B4F1D900B3B28D /* StringExtension.swift in Sources */,
 				CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */,
 				CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */,
 				CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */,
@@ -502,6 +517,7 @@
 				CD33A4A222B401E500B3B28D /* TweetTableViewOnlySenderCell.swift in Sources */,
 				CD1BF26022B3A876005DB838 /* Service.swift in Sources */,
 				CD33A4A922B4C57900B3B28D /* UIDeviceExtension.swift in Sources */,
+				CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */,
 				CD33A4A722B4C3E400B3B28D /* ImageBrowser.swift in Sources */,
 				CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */,
 				CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */,

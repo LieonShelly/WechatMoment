@@ -17,6 +17,7 @@ class ImageListView: UIView {
         static let imagePadding: CGFloat = 5
         static let width: CGFloat = UIScreen.main.bounds.width - 10 - 10 - 10 - 40
     }
+    
     var urls: [URL] = []
     fileprivate lazy var imageViewArray: [CanTapImageView] = []
     fileprivate lazy var imageBrowser: ImageBrowser = {

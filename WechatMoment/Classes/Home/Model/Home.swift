@@ -48,3 +48,13 @@ struct Tweet: HandyJSON {
     }
     
 }
+
+extension Comment: CommentData {
+    var contentText: String {
+       return self.content ?? ""
+    }
+    
+    var username: String {
+        return self.sender?.username ?? ""
+    }
+}

@@ -14,6 +14,9 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var commentHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentView: CommentView!
+    
     var tweet: Tweet?
     
     override func awakeFromNib() {
@@ -44,11 +47,15 @@ class TweetTableViewCell: UITableViewCell {
         }
         imageContainer.config(newURLs)
         imageHeight.constant = imageContainer.frame.height
-        let currentRowHeight =  imageContainer.frame.maxY + 10
-        if self.tweet?.rowHegight != currentRowHeight {
-            self.tweet?.rowHegight = imageContainer.frame.maxY + 10
-            layoutIfNeeded()
+        var currentRowHeight =  imageContainer.frame.maxY + 10
+        if let commets = model.comments {
+            commentView.configData(commets)
+            commentHeight.constant = commentView.frame.size.height
+            currentRowHeight =  commentView.frame.maxY + 10
+        } else {
+             commentHeight.constant = 0
         }
+       layoutIfNeeded()
      
     }
 }
