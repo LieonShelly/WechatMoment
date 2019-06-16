@@ -46,7 +46,6 @@ class HomeViewModel {
                     .model(UserProfile.self)
                     .asObservable()
                     .catchError {_ in Observable.never()}
-                    .trackActivity(activity)
             }
             .debug()
             .bind(to: userProfileOutput)
