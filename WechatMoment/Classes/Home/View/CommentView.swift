@@ -15,19 +15,34 @@ protocol CommentData {
 }
 
 @IBDesignable
-class CommentView: UITableView {
-
+class CommentView: UIView {
+    fileprivate lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.isScrollEnabled = false
+        tableView.separatorStyle = .none
+        tableView.separatorColor = UIColor.clear
+        return tableView
+    }()
+    fileprivate lazy var bgView: UIImageView = {
+        let bgView = UIImageView()
+        bgView.image = UIImage(named: "comment_bg")?.stretchableImage(withLeftCapWidth: 40, topCapHeight: Int(UISize.bgHeight))
+        return bgView
+    }()
+    
     struct UISize {
         static let width: CGFloat = UIScreen.main.bounds.width - 10 - 10 - 10 - 40
         static let padding: CGFloat = 3
+        static let bgHeight: CGFloat = 15
     }
     fileprivate var rowHeights: [String: CGFloat] = [:]
     fileprivate var totalHeight: CGFloat = 0
     
     var datas: [CommentData] = []
     
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         configUI()
     }
     
@@ -36,22 +51,29 @@ class CommentView: UITableView {
         configUI()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bgView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: UISize.bgHeight)
+        tableView.frame = CGRect(x: 0, y: UISize.bgHeight, width: bounds.size.width, height: bounds.size.height - UISize.bgHeight)
+    }
+    
     func configData(_ data: [CommentData]) {
         datas = data
         let sizeResult = CommentView.caculateSize(data)
         rowHeights = sizeResult.0
         totalHeight = sizeResult.1
         frame.size.height = totalHeight
-        reloadData()
+        tableView.reloadData()
+        tableView.backgroundColor = UIColor.clear
     }
     
     fileprivate func configUI() {
-        registerNibWithCell(CommentTableViewCell.self)
-        showsVerticalScrollIndicator = false
-        showsHorizontalScrollIndicator = false
-        isScrollEnabled = false
-        delegate = self
-        dataSource = self
+        addSubview(tableView)
+        addSubview(bgView)
+        tableView.backgroundColor = UIColor.clear
+        tableView.registerNibWithCell(CommentTableViewCell.self)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     static func caculateSize(_ datas: [CommentData]) -> ([String: CGFloat], CGFloat){
@@ -59,11 +81,14 @@ class CommentView: UITableView {
         var totalHeight: CGFloat = 0
         for comment in datas {
             let rowText = comment.username + "：" + comment.contentText
-            let rowHeight = rowText.height(fontSize: 15, width: UISize.width)
+            let rowHeight = rowText.height(fontSize: 15, width: UISize.width - UISize.padding * 2)
             rowHeights[comment.contentText] = rowHeight
             totalHeight += rowHeight
         }
-        return (rowHeights, totalHeight + CGFloat((datas.count - 1) ) * UISize.padding)
+        if totalHeight != 0 {
+             totalHeight = totalHeight + CGFloat(datas.count - 1) * UISize.padding + UISize.bgHeight
+        }
+        return (rowHeights, totalHeight)
     }
 }
 
@@ -73,10 +98,11 @@ extension CommentView: UITableViewDelegate {
         let rowHeight = rowHeights[model.contentText]
         return rowHeight ?? 0
     }
+    
 }
 
 extension CommentView: UITableViewDataSource {
-    override func numberOfRows(inSection section: Int) -> Int {
+    func numberOfRows(inSection section: Int) -> Int {
          return 1
     }
     
@@ -88,7 +114,16 @@ extension CommentView: UITableViewDataSource {
         let cell = tableView.dequeueCell(CommentTableViewCell.self, for: indexPath)
         cell.selectionStyle = .none
         cell.config(datas[indexPath.row])
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 10000, bottom: 0, right: 0)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect(x: 0, y: 0, width: 2, height: 0.0001))
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0001
     }
 }
 
