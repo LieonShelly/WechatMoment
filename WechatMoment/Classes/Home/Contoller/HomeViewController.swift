@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import RxSwiftExt
+import PKHUD
 
 class HomeViewController: UIViewController {
     let bag = DisposeBag()
@@ -55,19 +56,23 @@ class HomeViewController: UIViewController {
             configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
                 if item.content != nil, item.images != nil {
                     let cell = tableView.dequeueCell(TweetTableViewCell.self, for: indexPath)
+                    cell.selectionStyle = .none
                     cell.config(item)
-                     return cell
+                    return cell
                 } else if item.content != nil, item.images == nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlyTextCell.self, for: indexPath)
+                    cell.selectionStyle = .none
                     cell.config(item)
                      return cell
                 } else if item.content == nil, item.images != nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlyImageCell.self, for: indexPath)
                     cell.config(item)
+                    cell.selectionStyle = .none
                     return cell
                 } else if item.content == nil, item.images == nil, item.sender != nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlySenderCell.self, for: indexPath)
                     cell.config(item)
+                    cell.selectionStyle = .none
                     return cell
                 }
                 let defaultCell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
@@ -92,6 +97,11 @@ class HomeViewController: UIViewController {
         tableView.mj_footer = RefreshFooter(refreshingBlock: {
             viewModel.refreshInput.on(.next(false))
         })
+        
+        viewModel.laodingDriver
+            .asDriver(onErrorJustReturn: false)
+            .drive(HUD.loading)
+            .disposed(by: bag)
         
         viewModel.refreshStatus
             .bind(to: tableView.rx.mj_RefreshStatus)

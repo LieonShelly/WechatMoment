@@ -24,18 +24,28 @@ class HomeViewModel {
     let sectionDataDriver: Driver<[SectionModel<String, Tweet>]>
     let currentTweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
     let refreshStatus: BehaviorRelay<RefreshStatus> = BehaviorRelay(value: RefreshStatus.none)
+    let laodingDriver: PublishSubject<Bool> = .init()
+    var timer: Timer?
     
     init() {
         let provider = MoyaProvider<HomeService>()
         let activity = ActivityIndicator()
         let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
         let page: BehaviorRelay<Int> = BehaviorRelay(value: 2)
+        let exceptionInput: PublishSubject<Bool> = .init()
         
-        Observable.merge(viewDidLoad.asObservable(), refreshInput.asObservable().filter { $0 == true}.mapToVoid())
+        activity.asObservable()
+            .bind(to: laodingDriver)
+            .disposed(by: bag)
+        
+        Observable.merge(viewDidLoad.asObservable(),
+                         refreshInput.asObservable().filter { $0 == true}.mapToVoid(),
+                         exceptionInput.asObservable().filter { $0 == true}.mapToVoid())
             .flatMap { _ in
                 provider.rx.request(.userProfile)
                     .model(UserProfile.self)
                     .asObservable()
+                    .catchError {_ in Observable.never()}
                     .trackActivity(activity)
             }
             .debug()
@@ -43,11 +53,13 @@ class HomeViewModel {
             .disposed(by: bag)
 
         ///  ignore the tweet which does not contain content and images, 这样导致数据不够
-        viewDidLoad.asObservable()
+        Observable.merge(viewDidLoad.asObservable(),
+                         exceptionInput.asObservable().filter { $0 == true}.mapToVoid())
             .flatMap {
                 provider.rx.request(.tweetList)
                     .modelWithArray(Tweet.self)
                     .asObservable()
+                    .catchError {_ in Observable.never()}
                     .trackActivity(activity)
             }
             .map({ (serverData) -> [Tweet] in
@@ -56,6 +68,7 @@ class HomeViewModel {
             })
             .bind(to: tweetList)
             .disposed(by: bag)
+        
         
         tweetList.asObservable()
             .skip(1)
@@ -139,8 +152,23 @@ class HomeViewModel {
             .disposed(by: bag)
         
         
+        let timer = Timer(timeInterval: 1, repeats: true) { (timer) in
+            exceptionInput.on(.next(true))
+        }
+        self.timer = timer
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         
-
+        tweetList
+            .asObservable()
+            .filter { !$0.isEmpty}
+            .mapToVoid()
+            .subscribe(onNext: { [weak self](_) in
+                self?.timer?.invalidate()
+                self?.timer = nil
+                exceptionInput.on(.next(false))
+                self?.laodingDriver.on(.next(false))
+            })
+            .disposed(by: bag)
     }
 }
 
