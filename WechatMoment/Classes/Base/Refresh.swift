@@ -130,7 +130,7 @@ extension Reactive where Base: UIScrollView {
             case .beingHeaderRefresh:
                 control.mj_header.beginRefreshing()
             case .endHeaderRefresh:
-                control.mj_header.endRefreshing()
+                control.mj_header?.endRefreshing()
             case .beingFooterRefresh:
                 control.mj_footer.beginRefreshing()
             case .endFooterRefresh:

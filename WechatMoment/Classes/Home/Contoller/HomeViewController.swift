@@ -94,9 +94,18 @@ class HomeViewController: UIViewController {
             .bind(to: tweetList)
             .disposed(by: bag)
         
-        tableView.mj_header = RefreshHeader(refreshingBlock: {
-            viewModel.refreshInput.on(.next(true))
-        })
+        let momentRefresh = MomentRefreshView.loadView(with: CGPoint(x: 20, y: 45))
+        momentRefresh.configScrollView(tableView)
+        view.addSubview(momentRefresh)
+        view.bringSubviewToFront(momentRefresh)
+        
+        momentRefresh.refreshAction = {
+             viewModel.refreshInput.on(.next(true))
+            //            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
+            //                momentRefresh.endRefresh()
+            //            })
+        }
+        
     
         tableView.mj_footer = RefreshFooter(refreshingBlock: {
             viewModel.refreshInput.on(.next(false))
@@ -109,6 +118,10 @@ class HomeViewController: UIViewController {
         
         viewModel.refreshStatus
             .bind(to: tableView.rx.mj_RefreshStatus)
+            .disposed(by: bag)
+        
+        viewModel.refreshStatus
+            .bind(to: momentRefresh.rx.momentHeaderRefreshStatus)
             .disposed(by: bag)
         
         viewModel.currentTweetList
@@ -136,6 +149,7 @@ class HomeViewController: UIViewController {
         tableView.registerNibWithCell(TweetTableViewOnlyImageCell.self)
         tableView.registerNibWithCell(TweetTableViewOnlyTextCell.self)
         tableView.registerNibWithCell(TweetTableViewOnlySenderCell.self)
+    
         
     }
     

@@ -102,6 +102,7 @@ class HomeViewModel {
         
          currentTweetList
             .asObservable()
+            .skip(1)
             .map {_ in RefreshStatus.endHeaderRefresh}
             .bind(to: refreshStatus)
             .disposed(by: bag)
