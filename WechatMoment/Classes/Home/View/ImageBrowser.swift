@@ -59,6 +59,10 @@ extension ImageBrowser: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / self.frame.width)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("panTest-scrollViewDidScroll")
+    }
 }
 
 
@@ -67,7 +71,8 @@ class ImageScrollView: UIScrollView {
     var didlongPress: ((ImageScrollView) -> Void)?
     var originRect: CGRect?
     var contentRect: CGRect = .zero
-    
+    var startFrame: CGRect = .zero
+    var startLocation: CGPoint = .zero
     fileprivate lazy var iamgeView: UIImageView = {
         let iamgeView = UIImageView()
         iamgeView.clipsToBounds = true
@@ -76,7 +81,7 @@ class ImageScrollView: UIScrollView {
         iamgeView.backgroundColor = UIColor.lightGray
         return iamgeView
     }()
-    
+    var  panges = UIPanGestureRecognizer()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -95,6 +100,7 @@ class ImageScrollView: UIScrollView {
     func configContentRect(_ contentRect: CGRect) {
         self.contentRect = contentRect
         iamgeView.frame = contentRect
+        debugPrint("configContentRect:\(self.contentRect)")
     }
     
     func updateRect() {
@@ -143,6 +149,15 @@ class ImageScrollView: UIScrollView {
         let longPress = UILongPressGestureRecognizer()
         longPress.addTarget(self, action: #selector(self.longtapAction(_:)))
         addGestureRecognizer(longPress)
+        
+//        panges.addTarget(self, action: #selector(self.panAction(_:)))
+//        addGestureRecognizer(panges)
+    }
+  
+    fileprivate func removePanGes() {
+       if self.gestureRecognizers?.contains(self.panges) ?? false {
+            removeGestureRecognizer(panges)
+        }
     }
 }
 
@@ -164,7 +179,10 @@ extension ImageScrollView: UIScrollViewDelegate {
         }
         iamgeView.center = centerPoint
     }
+    
+    
 }
+
 
 
 extension ImageScrollView {
@@ -186,5 +204,56 @@ extension ImageScrollView {
     
     @objc fileprivate func longtapAction( _ ges: UILongPressGestureRecognizer) {
         didlongPress?(self)
+    }
+    
+    @objc fileprivate func panAction( _ ges: UIPanGestureRecognizer) {
+        let point = ges.translation(in: self)
+        let location = ges.location(in: self)
+        let velocity = ges.velocity(in: self)
+        debugPrint("panTest-panAction")
+        debugPrint("panAction - point:\(point) - location:\(location) - velocity:\(velocity)")
+        switch ges.state {
+        case .began:
+            startFrame = iamgeView.frame
+            startLocation = location
+            break
+        case .changed:
+            if self.frame.height == 0 {
+                return
+            }
+            let percent = 1 - abs(point.y) / self.frame.size.height
+            let s = max(percent, 0.3)
+            if startFrame.size == .zero {
+                return
+            }
+            let width = startFrame.size.width * s
+            let height = startFrame.size.height * s
+            let rateX = (startLocation.x - startFrame.origin.x) / startFrame.size.width
+            let x = location.x - width * rateX
+            let ratey = (startLocation.y - startFrame.origin.y) / startFrame.size.height
+            let y = location.y - height * ratey
+            iamgeView.frame = CGRect(x: x, y: y, width: width, height: height)
+            self.backgroundColor = UIColor.black.withAlphaComponent(percent)
+            break
+        case .ended, .cancelled:
+            if abs(point.y) > 200 || abs(velocity.y) > 500 {
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.superview?.superview?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+                    self.iamgeView.frame = self.contentRect
+                   
+                }) { (flag) in
+                    if flag {
+                         self.superview?.superview?.removeFromSuperview()
+                    }
+                }
+            
+            } else {
+                configContentRect(iamgeView.frame)
+                updateRect()
+            }
+            break
+        default:
+            break
+        }
     }
 }
