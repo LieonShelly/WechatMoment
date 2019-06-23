@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="245" id="KGk-i7-Jjw" customClass="TweetTableViewOnlySenderCell" customModule="WechatMoment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="245"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="409" height="244.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-ID-6yk">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="02j-rI-Bcy"/>
+                            <constraint firstAttribute="width" constant="40" id="1t0-gc-uHl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-PB-ElP">
+                        <rect key="frame" x="60" y="10" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.4039215686" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-2x-SJV" customClass="CommentView" customModule="WechatMoment" customModuleProvider="target">
+                        <rect key="frame" x="60" y="48" width="339" height="186.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="186.5" id="LAQ-rm-iqW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UMM-PB-ElP" firstAttribute="leading" secondItem="AcP-ID-6yk" secondAttribute="trailing" constant="10" id="Dal-uJ-ABt"/>
+                    <constraint firstItem="Lw9-2x-SJV" firstAttribute="leading" secondItem="UMM-PB-ElP" secondAttribute="leading" id="GS5-6a-gWB"/>
+                    <constraint firstAttribute="trailing" secondItem="Lw9-2x-SJV" secondAttribute="trailing" constant="10" id="LJg-Yz-Kdj"/>
+                    <constraint firstAttribute="bottom" secondItem="Lw9-2x-SJV" secondAttribute="bottom" constant="10" id="Zel-Tz-3Bp"/>
+                    <constraint firstItem="Lw9-2x-SJV" firstAttribute="top" secondItem="UMM-PB-ElP" secondAttribute="bottom" constant="20" id="af0-Hn-2h0"/>
+                    <constraint firstItem="AcP-ID-6yk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="huR-XD-vGp"/>
+                    <constraint firstItem="UMM-PB-ElP" firstAttribute="top" secondItem="AcP-ID-6yk" secondAttribute="top" id="m6H-mx-fmi"/>
+                    <constraint firstItem="AcP-ID-6yk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="mKZ-qg-Q6C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentHeight" destination="LAQ-rm-iqW" id="6vB-Iw-aEt"/>
+                <outlet property="commentView" destination="Lw9-2x-SJV" id="0Mx-e5-6ee"/>
+                <outlet property="iconView" destination="AcP-ID-6yk" id="e5k-o1-XIY"/>
+                <outlet property="nameLabel" destination="UMM-PB-ElP" id="I3V-57-62d"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="138.98050974512745"/>
+        </tableViewCell>
+    </objects>
+</document>

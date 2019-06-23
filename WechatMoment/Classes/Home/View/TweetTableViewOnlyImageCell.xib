@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="520" id="KGk-i7-Jjw" customClass="TweetTableViewOnlyImageCell" customModule="WechatMoment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="676" height="520"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="676" height="519.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-N4-fa8">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BTS-c3-Y6i"/>
+                            <constraint firstAttribute="width" constant="40" id="wST-h3-56U"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULw-k7-VOZ">
+                        <rect key="frame" x="60" y="10" width="38" height="484"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.4039215686" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8E-vk-tEZ" customClass="ImageListView" customModule="WechatMoment" customModuleProvider="target">
+                        <rect key="frame" x="60" y="499" width="606" height="0.0"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="zUz-bJ-F18"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-TX-Zh3">
+                        <rect key="frame" x="0.0" y="519" width="676" height="0.5"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="iM2-Gg-EqK"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-IQ-6mH" customClass="CommentView" customModule="WechatMoment" customModuleProvider="target">
+                        <rect key="frame" x="60" y="509" width="606" height="0.0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="0TG-AI-Kf6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="B8E-vk-tEZ" firstAttribute="leading" secondItem="ULw-k7-VOZ" secondAttribute="leading" id="1Z1-77-hOe"/>
+                    <constraint firstItem="ULw-k7-VOZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7j5-CZ-5MX"/>
+                    <constraint firstItem="WUx-IQ-6mH" firstAttribute="top" secondItem="B8E-vk-tEZ" secondAttribute="bottom" constant="10" id="9vv-X6-Mi4"/>
+                    <constraint firstAttribute="bottom" secondItem="N8a-TX-Zh3" secondAttribute="bottom" id="BJ2-Pv-g1g"/>
+                    <constraint firstItem="ULw-k7-VOZ" firstAttribute="top" secondItem="uA3-N4-fa8" secondAttribute="top" id="PGC-Sa-ISa"/>
+                    <constraint firstItem="WUx-IQ-6mH" firstAttribute="leading" secondItem="ULw-k7-VOZ" secondAttribute="leading" id="dmf-sl-LSa"/>
+                    <constraint firstItem="uA3-N4-fa8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ebU-yM-GIc"/>
+                    <constraint firstAttribute="trailing" secondItem="B8E-vk-tEZ" secondAttribute="trailing" constant="10" id="faz-8B-9Vd"/>
+                    <constraint firstItem="uA3-N4-fa8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="g2L-HB-ovr"/>
+                    <constraint firstAttribute="trailing" secondItem="N8a-TX-Zh3" secondAttribute="trailing" id="ikk-NJ-XrS"/>
+                    <constraint firstItem="N8a-TX-Zh3" firstAttribute="top" secondItem="WUx-IQ-6mH" secondAttribute="bottom" constant="10" id="mhN-Dy-0VY"/>
+                    <constraint firstAttribute="trailing" secondItem="WUx-IQ-6mH" secondAttribute="trailing" constant="10" id="mvE-zu-VKg"/>
+                    <constraint firstItem="B8E-vk-tEZ" firstAttribute="top" secondItem="ULw-k7-VOZ" secondAttribute="bottom" constant="5" id="qpU-Gr-PxK"/>
+                    <constraint firstItem="ULw-k7-VOZ" firstAttribute="leading" secondItem="uA3-N4-fa8" secondAttribute="trailing" constant="10" id="ydP-bA-3t3"/>
+                    <constraint firstItem="N8a-TX-Zh3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zgn-ko-gcn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentHeight" destination="0TG-AI-Kf6" id="PzB-OK-i9J"/>
+                <outlet property="commentView" destination="WUx-IQ-6mH" id="6Gn-BD-1aI"/>
+                <outlet property="iconView" destination="uA3-N4-fa8" id="zC7-39-vQf"/>
+                <outlet property="imageContainer" destination="B8E-vk-tEZ" id="Icf-cd-YFy"/>
+                <outlet property="imageHeight" destination="zUz-bJ-F18" id="7uT-Yu-8gn"/>
+                <outlet property="nameLabel" destination="ULw-k7-VOZ" id="Y64-hd-lYs"/>
+            </connections>
+            <point key="canvasLocation" x="291.19999999999999" y="328.33583208395805"/>
+        </tableViewCell>
+    </objects>
+</document>
