@@ -102,6 +102,10 @@ class HomeViewModel {
         
          currentTweetList
             .asObservable()
+<<<<<<< HEAD
+=======
+            .skip(1)
+>>>>>>> 69b99a1062a282cc53145f01cc5fdec783b4c0fa
             .map {_ in RefreshStatus.endHeaderRefresh}
             .bind(to: refreshStatus)
             .disposed(by: bag)

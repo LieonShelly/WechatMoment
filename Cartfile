@@ -2,8 +2,11 @@
 
 # git "ssh://git@git.qukanshu.com/ios/PKHUD.git" ~> 1.0.0
 
+<<<<<<< HEAD
 # git "file:///Users/lieon/Desktop/CompanyProjects/Arab/Carthage/Checkouts/PKHUD"
 
+=======
+>>>>>>> 69b99a1062a282cc53145f01cc5fdec783b4c0fa
 # git@github.com:ReactiveX/RxSwift.git
 # github "ReactiveX/RxSwift" ~> 4.0
 
@@ -59,6 +62,9 @@
 # github "krzyzanowskim/CryptoSwift"
 
 # github "MortimerGoro/MGSwipeTableCell"
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 69b99a1062a282cc53145f01cc5fdec783b4c0fa

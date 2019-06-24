@@ -46,32 +46,29 @@
 		CD7C46CB22B6A41500371C77 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C822B6A41500371C77 /* StringExtension.swift */; };
 		CD97939422B3A1BF00E0CEE6 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */; };
 		CD97939522B3A1BF00E0CEE6 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */; };
-		CD97939622B3A1BF00E0CEE6 /* FSPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937622B3A1BE00E0CEE6 /* FSPagerView.framework */; };
 		CD97939822B3A1BF00E0CEE6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937822B3A1BE00E0CEE6 /* SnapKit.framework */; };
 		CD97939922B3A1BF00E0CEE6 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937922B3A1BE00E0CEE6 /* Action.framework */; };
 		CD97939B22B3A1BF00E0CEE6 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937B22B3A1BE00E0CEE6 /* PKHUD.framework */; };
-		CD97939C22B3A1BF00E0CEE6 /* StatefulViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937C22B3A1BE00E0CEE6 /* StatefulViewController.framework */; };
 		CD97939D22B3A1BF00E0CEE6 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937D22B3A1BE00E0CEE6 /* RxSwiftExt.framework */; };
 		CD97939E22B3A1BF00E0CEE6 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937E22B3A1BF00E0CEE6 /* HandyJSON.framework */; };
-		CD97939F22B3A1BF00E0CEE6 /* MXParallaxHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937F22B3A1BF00E0CEE6 /* MXParallaxHeader.framework */; };
-		CD9793A022B3A1BF00E0CEE6 /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938022B3A1BF00E0CEE6 /* MGSwipeTableCell.framework */; };
 		CD9793A222B3A1BF00E0CEE6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938222B3A1BF00E0CEE6 /* Alamofire.framework */; };
 		CD9793A322B3A1BF00E0CEE6 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938322B3A1BF00E0CEE6 /* RxBlocking.framework */; };
 		CD9793A422B3A1BF00E0CEE6 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938422B3A1BF00E0CEE6 /* MJRefresh.framework */; };
 		CD9793A522B3A1BF00E0CEE6 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938522B3A1BF00E0CEE6 /* RxDataSources.framework */; };
-		CD9793A622B3A1BF00E0CEE6 /* CameraViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938622B3A1BF00E0CEE6 /* CameraViewController.framework */; };
-		CD9793A722B3A1BF00E0CEE6 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938722B3A1BF00E0CEE6 /* RxRealm.framework */; };
 		CD9793A822B3A1BF00E0CEE6 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938822B3A1BF00E0CEE6 /* ReactiveSwift.framework */; };
 		CD9793A922B3A1BF00E0CEE6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938922B3A1BF00E0CEE6 /* Kingfisher.framework */; };
 		CD9793AA22B3A1BF00E0CEE6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938A22B3A1BF00E0CEE6 /* RxSwift.framework */; };
-		CD9793AB22B3A1BF00E0CEE6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938B22B3A1BF00E0CEE6 /* RealmSwift.framework */; };
 		CD9793AC22B3A1BF00E0CEE6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938C22B3A1BF00E0CEE6 /* RxCocoa.framework */; };
 		CD9793AD22B3A1BF00E0CEE6 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938D22B3A1BF00E0CEE6 /* Moya.framework */; };
-		CD9793AE22B3A1BF00E0CEE6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938E22B3A1BF00E0CEE6 /* CryptoSwift.framework */; };
 		CD9793AF22B3A1BF00E0CEE6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938F22B3A1BF00E0CEE6 /* Result.framework */; };
-		CD9793B022B3A1BF00E0CEE6 /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97939022B3A1BF00E0CEE6 /* TagListView.framework */; };
 		CD9793B122B3A1BF00E0CEE6 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */; };
-		CD9793B322B3A1BF00E0CEE6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97939322B3A1BF00E0CEE6 /* Realm.framework */; };
+		CDB3F5EF22C113E800FEE48A /* ImageSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5EE22C113E800FEE48A /* ImageSession.swift */; };
+		CDB3F5F122C129B900FEE48A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5F022C129B900FEE48A /* TestViewController.swift */; };
+		CDB3F5F322C12F5600FEE48A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5F222C12F5600FEE48A /* Protocol.swift */; };
+		CDB3F5F522C12FE000FEE48A /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5F422C12FE000FEE48A /* SessionDelegate.swift */; };
+		CDD2A53922C07553005C3C9A /* ImageSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */; };
+		CDD2A53A22C07553005C3C9A /* ImageSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */; };
+		CDD4288522BF2E3F003A616F /* MomentRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4288422BF2E3F003A616F /* MomentRefreshView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,32 +113,29 @@
 		CD7C46C822B6A41500371C77 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
 		CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
-		CD97937622B3A1BE00E0CEE6 /* FSPagerView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSPagerView.framework; path = Carthage/Build/iOS/FSPagerView.framework; sourceTree = "<group>"; };
 		CD97937822B3A1BE00E0CEE6 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		CD97937922B3A1BE00E0CEE6 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		CD97937B22B3A1BE00E0CEE6 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
-		CD97937C22B3A1BE00E0CEE6 /* StatefulViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StatefulViewController.framework; path = Carthage/Build/iOS/StatefulViewController.framework; sourceTree = "<group>"; };
 		CD97937D22B3A1BE00E0CEE6 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		CD97937E22B3A1BF00E0CEE6 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = Carthage/Build/iOS/HandyJSON.framework; sourceTree = "<group>"; };
-		CD97937F22B3A1BF00E0CEE6 /* MXParallaxHeader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MXParallaxHeader.framework; path = Carthage/Build/iOS/MXParallaxHeader.framework; sourceTree = "<group>"; };
-		CD97938022B3A1BF00E0CEE6 /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = Carthage/Build/iOS/MGSwipeTableCell.framework; sourceTree = "<group>"; };
 		CD97938222B3A1BF00E0CEE6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CD97938322B3A1BF00E0CEE6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		CD97938422B3A1BF00E0CEE6 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = Carthage/Build/iOS/MJRefresh.framework; sourceTree = "<group>"; };
 		CD97938522B3A1BF00E0CEE6 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
-		CD97938622B3A1BF00E0CEE6 /* CameraViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraViewController.framework; path = Carthage/Build/iOS/CameraViewController.framework; sourceTree = "<group>"; };
-		CD97938722B3A1BF00E0CEE6 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
 		CD97938822B3A1BF00E0CEE6 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		CD97938922B3A1BF00E0CEE6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CD97938A22B3A1BF00E0CEE6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		CD97938B22B3A1BF00E0CEE6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		CD97938C22B3A1BF00E0CEE6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CD97938D22B3A1BF00E0CEE6 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
-		CD97938E22B3A1BF00E0CEE6 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		CD97938F22B3A1BF00E0CEE6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		CD97939022B3A1BF00E0CEE6 /* TagListView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TagListView.framework; path = Carthage/Build/iOS/TagListView.framework; sourceTree = "<group>"; };
 		CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
-		CD97939322B3A1BF00E0CEE6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		CDB3F5EE22C113E800FEE48A /* ImageSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSession.swift; sourceTree = "<group>"; };
+		CDB3F5F022C129B900FEE48A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		CDB3F5F222C12F5600FEE48A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		CDB3F5F422C12FE000FEE48A /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSessionViewController.swift; sourceTree = "<group>"; };
+		CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSessionViewController.xib; sourceTree = "<group>"; };
+		CDD4288422BF2E3F003A616F /* MomentRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,32 +145,22 @@
 			files = (
 				CD97939422B3A1BF00E0CEE6 /* ReactiveMoya.framework in Frameworks */,
 				CD97939522B3A1BF00E0CEE6 /* RxMoya.framework in Frameworks */,
-				CD97939622B3A1BF00E0CEE6 /* FSPagerView.framework in Frameworks */,
 				CD97939822B3A1BF00E0CEE6 /* SnapKit.framework in Frameworks */,
 				CD97939922B3A1BF00E0CEE6 /* Action.framework in Frameworks */,
 				CD97939B22B3A1BF00E0CEE6 /* PKHUD.framework in Frameworks */,
-				CD97939C22B3A1BF00E0CEE6 /* StatefulViewController.framework in Frameworks */,
 				CD97939D22B3A1BF00E0CEE6 /* RxSwiftExt.framework in Frameworks */,
 				CD97939E22B3A1BF00E0CEE6 /* HandyJSON.framework in Frameworks */,
-				CD97939F22B3A1BF00E0CEE6 /* MXParallaxHeader.framework in Frameworks */,
-				CD9793A022B3A1BF00E0CEE6 /* MGSwipeTableCell.framework in Frameworks */,
 				CD9793A222B3A1BF00E0CEE6 /* Alamofire.framework in Frameworks */,
 				CD9793A322B3A1BF00E0CEE6 /* RxBlocking.framework in Frameworks */,
 				CD9793A422B3A1BF00E0CEE6 /* MJRefresh.framework in Frameworks */,
 				CD9793A522B3A1BF00E0CEE6 /* RxDataSources.framework in Frameworks */,
-				CD9793A622B3A1BF00E0CEE6 /* CameraViewController.framework in Frameworks */,
-				CD9793A722B3A1BF00E0CEE6 /* RxRealm.framework in Frameworks */,
 				CD9793A822B3A1BF00E0CEE6 /* ReactiveSwift.framework in Frameworks */,
 				CD9793A922B3A1BF00E0CEE6 /* Kingfisher.framework in Frameworks */,
 				CD9793AA22B3A1BF00E0CEE6 /* RxSwift.framework in Frameworks */,
-				CD9793AB22B3A1BF00E0CEE6 /* RealmSwift.framework in Frameworks */,
 				CD9793AC22B3A1BF00E0CEE6 /* RxCocoa.framework in Frameworks */,
 				CD9793AD22B3A1BF00E0CEE6 /* Moya.framework in Frameworks */,
-				CD9793AE22B3A1BF00E0CEE6 /* CryptoSwift.framework in Frameworks */,
 				CD9793AF22B3A1BF00E0CEE6 /* Result.framework in Frameworks */,
-				CD9793B022B3A1BF00E0CEE6 /* TagListView.framework in Frameworks */,
 				CD9793B122B3A1BF00E0CEE6 /* Differentiator.framework in Frameworks */,
-				CD9793B322B3A1BF00E0CEE6 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +215,7 @@
 		CD1BF24A22B3A5C5005DB838 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CDD2A53622C07519005C3C9A /* ImageSession */,
 				CD1BF25E22B3A86B005DB838 /* Service */,
 				CD1BF25222B3A681005DB838 /* Base */,
 				CD1BF24522B3A563005DB838 /* Home */,
@@ -297,6 +282,7 @@
 				CD33A4AA22B4EE4400B3B28D /* CommentView.swift */,
 				CD33A4AC22B4EF5D00B3B28D /* CommentTableViewCell.swift */,
 				CD33A4AD22B4EF5D00B3B28D /* CommentTableViewCell.xib */,
+				CDD4288422BF2E3F003A616F /* MomentRefreshView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,34 +332,45 @@
 			children = (
 				CD97937922B3A1BE00E0CEE6 /* Action.framework */,
 				CD97938222B3A1BF00E0CEE6 /* Alamofire.framework */,
-				CD97938622B3A1BF00E0CEE6 /* CameraViewController.framework */,
-				CD97938E22B3A1BF00E0CEE6 /* CryptoSwift.framework */,
 				CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */,
-				CD97937622B3A1BE00E0CEE6 /* FSPagerView.framework */,
 				CD97937E22B3A1BF00E0CEE6 /* HandyJSON.framework */,
 				CD97938922B3A1BF00E0CEE6 /* Kingfisher.framework */,
-				CD97938022B3A1BF00E0CEE6 /* MGSwipeTableCell.framework */,
 				CD97938422B3A1BF00E0CEE6 /* MJRefresh.framework */,
 				CD97938D22B3A1BF00E0CEE6 /* Moya.framework */,
-				CD97937F22B3A1BF00E0CEE6 /* MXParallaxHeader.framework */,
 				CD97937B22B3A1BE00E0CEE6 /* PKHUD.framework */,
 				CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */,
 				CD97938822B3A1BF00E0CEE6 /* ReactiveSwift.framework */,
-				CD97939322B3A1BF00E0CEE6 /* Realm.framework */,
-				CD97938B22B3A1BF00E0CEE6 /* RealmSwift.framework */,
 				CD97938F22B3A1BF00E0CEE6 /* Result.framework */,
 				CD97938322B3A1BF00E0CEE6 /* RxBlocking.framework */,
 				CD97938C22B3A1BF00E0CEE6 /* RxCocoa.framework */,
 				CD97938522B3A1BF00E0CEE6 /* RxDataSources.framework */,
 				CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */,
-				CD97938722B3A1BF00E0CEE6 /* RxRealm.framework */,
 				CD97938A22B3A1BF00E0CEE6 /* RxSwift.framework */,
 				CD97937D22B3A1BE00E0CEE6 /* RxSwiftExt.framework */,
 				CD97937822B3A1BE00E0CEE6 /* SnapKit.framework */,
-				CD97937C22B3A1BE00E0CEE6 /* StatefulViewController.framework */,
-				CD97939022B3A1BF00E0CEE6 /* TagListView.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDB3F5ED22C113C400FEE48A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CDB3F5EE22C113E800FEE48A /* ImageSession.swift */,
+				CDB3F5F222C12F5600FEE48A /* Protocol.swift */,
+				CDB3F5F422C12FE000FEE48A /* SessionDelegate.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDD2A53622C07519005C3C9A /* ImageSession */ = {
+			isa = PBXGroup;
+			children = (
+				CDB3F5ED22C113C400FEE48A /* Service */,
+				CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */,
+				CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */,
+				CDB3F5F022C129B900FEE48A /* TestViewController.swift */,
+			);
+			path = ImageSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD33A4A322B401E500B3B28D /* TweetTableViewOnlySenderCell.xib in Resources */,
+				CDD2A53A22C07553005C3C9A /* ImageSessionViewController.xib in Resources */,
 				CD33A49222B3F46700B3B28D /* TweetTableViewCell.xib in Resources */,
 				CD33A48D22B3F1F900B3B28D /* HomeHeaderView.xib in Resources */,
 				CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */,
@@ -475,20 +473,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FSPagerView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MJRefresh.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MXParallaxHeader.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StatefulViewController.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MXParallaxHeader.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StatefulViewController.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TagListView.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CameraViewController.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MGSwipeTableCell.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -497,7 +483,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\\\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -514,21 +500,27 @@
 				CD33A4B722B686B500B3B28D /* RefreshFooterStatusView.swift in Sources */,
 				CD33A4AB22B4EE4400B3B28D /* CommentView.swift in Sources */,
 				CD33A4B322B6867300B3B28D /* Refresh.swift in Sources */,
+				CDD4288522BF2E3F003A616F /* MomentRefreshView.swift in Sources */,
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
 				CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */,
 				CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */,
+				CDD2A53922C07553005C3C9A /* ImageSessionViewController.swift in Sources */,
 				CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */,
+				CDB3F5EF22C113E800FEE48A /* ImageSession.swift in Sources */,
 				CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */,
 				CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */,
 				CD1BF25922B3A696005DB838 /* AppResponse.swift in Sources */,
 				CD33A49122B3F46700B3B28D /* TweetTableViewCell.swift in Sources */,
 				CD1BF25A22B3A696005DB838 /* SectionModel.swift in Sources */,
 				CD1BF25822B3A696005DB838 /* CommonData.swift in Sources */,
+				CDB3F5F522C12FE000FEE48A /* SessionDelegate.swift in Sources */,
 				CD33A4A222B401E500B3B28D /* TweetTableViewOnlySenderCell.swift in Sources */,
 				CD1BF26022B3A876005DB838 /* Service.swift in Sources */,
+				CDB3F5F122C129B900FEE48A /* TestViewController.swift in Sources */,
 				CD7C46CA22B6A41500371C77 /* UIDeviceExtension.swift in Sources */,
 				CD33A4AE22B4EF5D00B3B28D /* CommentTableViewCell.swift in Sources */,
 				CD33A4A722B4C3E400B3B28D /* ImageBrowser.swift in Sources */,
+				CDB3F5F322C12F5600FEE48A /* Protocol.swift in Sources */,
 				CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */,
 				CD33A48E22B3F1F900B3B28D /* HomeHeaderView.swift in Sources */,
 				CD1BF26222B3A9FF005DB838 /* Home.swift in Sources */,
