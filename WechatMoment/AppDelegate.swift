@@ -20,11 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate func chooseRootVc(_ launchOption: [UIApplication.LaunchOptionsKey: Any]?) {
         window = UIWindow(frame: UIScreen.main.bounds)
-<<<<<<< HEAD
-        window?.rootViewController = UINavigationController(rootViewController: HomeViewController(HomeViewModel()))
-=======
-        window?.rootViewController = UINavigationController(rootViewController: HomeViewController(HomeViewModel()))  //UINavigationController(rootViewController: ImageSessionViewController())
->>>>>>> 69b99a1062a282cc53145f01cc5fdec783b4c0fa
+        window?.rootViewController = UINavigationController(rootViewController: ImageSessionViewController()) //  UINavigationController(rootViewController: HomeViewController(HomeViewModel()))
         window?.makeKeyAndVisible()
         // 屏蔽控制台autolayout约束内容的输出
         UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
