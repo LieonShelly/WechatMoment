@@ -15,7 +15,6 @@ import PKHUD
 
 class HomeViewController: UIViewController {
     let bag = DisposeBag()
-    
     @IBOutlet weak var titlleLabel: UILabel!
     @IBOutlet weak var navHeight: NSLayoutConstraint!
     @IBOutlet weak var navView: UIView!
@@ -101,12 +100,8 @@ class HomeViewController: UIViewController {
         
         momentRefresh.refreshAction = {
              viewModel.refreshInput.on(.next(true))
-            //            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
-            //                momentRefresh.endRefresh()
-            //            })
         }
         
-    
         tableView.mj_footer = RefreshFooter(refreshingBlock: {
             viewModel.refreshInput.on(.next(false))
         })
@@ -149,8 +144,6 @@ class HomeViewController: UIViewController {
         tableView.registerNibWithCell(TweetTableViewOnlyImageCell.self)
         tableView.registerNibWithCell(TweetTableViewOnlyTextCell.self)
         tableView.registerNibWithCell(TweetTableViewOnlySenderCell.self)
-    
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

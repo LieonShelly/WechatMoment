@@ -62,6 +62,8 @@
 		CD9793AD22B3A1BF00E0CEE6 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938D22B3A1BF00E0CEE6 /* Moya.framework */; };
 		CD9793AF22B3A1BF00E0CEE6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938F22B3A1BF00E0CEE6 /* Result.framework */; };
 		CD9793B122B3A1BF00E0CEE6 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */; };
+		CDD2A53922C07553005C3C9A /* ImageSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */; };
+		CDD2A53A22C07553005C3C9A /* ImageSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */; };
 		CDD4288522BF2E3F003A616F /* MomentRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4288422BF2E3F003A616F /* MomentRefreshView.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,8 @@
 		CD97938D22B3A1BF00E0CEE6 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		CD97938F22B3A1BF00E0CEE6 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSessionViewController.swift; sourceTree = "<group>"; };
+		CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSessionViewController.xib; sourceTree = "<group>"; };
 		CDD4288422BF2E3F003A616F /* MomentRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +207,7 @@
 		CD1BF24A22B3A5C5005DB838 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CDD2A53622C07519005C3C9A /* ImageSession */,
 				CD1BF25E22B3A86B005DB838 /* Service */,
 				CD1BF25222B3A681005DB838 /* Base */,
 				CD1BF24522B3A563005DB838 /* Home */,
@@ -339,6 +344,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDD2A53622C07519005C3C9A /* ImageSession */ = {
+			isa = PBXGroup;
+			children = (
+				CDD2A53722C07553005C3C9A /* ImageSessionViewController.swift */,
+				CDD2A53822C07553005C3C9A /* ImageSessionViewController.xib */,
+			);
+			path = ImageSession;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD33A4A322B401E500B3B28D /* TweetTableViewOnlySenderCell.xib in Resources */,
+				CDD2A53A22C07553005C3C9A /* ImageSessionViewController.xib in Resources */,
 				CD33A49222B3F46700B3B28D /* TweetTableViewCell.xib in Resources */,
 				CD33A48D22B3F1F900B3B28D /* HomeHeaderView.xib in Resources */,
 				CD635D8322B39FB300D0069E /* LaunchScreen.storyboard in Resources */,
@@ -469,6 +484,7 @@
 				CD1BF25B22B3A696005DB838 /* AppError.swift in Sources */,
 				CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */,
 				CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */,
+				CDD2A53922C07553005C3C9A /* ImageSessionViewController.swift in Sources */,
 				CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */,
 				CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */,
 				CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */,
