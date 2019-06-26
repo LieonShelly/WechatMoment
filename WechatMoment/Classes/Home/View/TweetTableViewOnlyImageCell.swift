@@ -45,18 +45,11 @@ class TweetTableViewOnlyImageCell: UITableViewCell {
         }
         imageContainer.config(newURLs)
         imageHeight.constant = imageContainer.frame.height
-        /// FIXME: 缓存行高 
-        var currentRowHeight =  imageContainer.frame.maxY + 10
         if let commets = model.comments {
             commentView.configData(commets)
             commentHeight.constant = commentView.frame.size.height
-            currentRowHeight =  commentView.frame.maxY + 10
         } else {
             commentHeight.constant = 0
-        }
-        if currentRowHeight != model.rowHegight {
-            tweet?.rowHegight = currentRowHeight
-            layoutIfNeeded()
         }
         
     }

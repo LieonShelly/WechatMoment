@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var navView: UIView!
     @IBOutlet weak var tableView: UITableView!
     let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
+    fileprivate var cacheHeights: [String: CGFloat] = [:]
     struct UISize {
         static let headerHeight: CGFloat = 667 * 0.5
         
@@ -56,26 +57,46 @@ class HomeViewController: UIViewController {
             .disposed(by: bag)
     
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Tweet>>(
-            configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+            configureCell: { [weak self](_, tableView, indexPath, item) -> UITableViewCell in
                 if item.content != nil, item.images != nil {
                     let cell = tableView.dequeueCell(TweetTableViewCell.self, for: indexPath)
                     cell.selectionStyle = .none
                     cell.config(item)
+                    if let weakSelf = self {
+                           let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
+                        debugPrint("cell-height:\(height)")
+                        weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
+                    }
                     return cell
                 } else if item.content != nil, item.images == nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlyTextCell.self, for: indexPath)
                     cell.selectionStyle = .none
                     cell.config(item)
+                    if let weakSelf = self {
+                        let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
+                        debugPrint("cell-height:\(height)")
+                        weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
+                    }
                      return cell
                 } else if item.content == nil, item.images != nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlyImageCell.self, for: indexPath)
                     cell.config(item)
                     cell.selectionStyle = .none
+                    if let weakSelf = self {
+                        let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
+                        debugPrint("cell-height:\(height)")
+                        weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
+                    }
                     return cell
                 } else if item.content == nil, item.images == nil, item.sender != nil {
                     let cell = tableView.dequeueCell(TweetTableViewOnlySenderCell.self, for: indexPath)
                     cell.config(item)
                     cell.selectionStyle = .none
+                    if let weakSelf = self {
+                        let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
+                        debugPrint("cell-height:\(height)")
+                        weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
+                    }
                     return cell
                 }
                 let defaultCell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
@@ -150,12 +171,16 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    fileprivate static func cellHeightKey(_ indexPath: IndexPath) -> String {
+        return "\(indexPath.section)" + "-" + "\(indexPath.row)"
+    }
 
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return UITableView.automaticDimension
+       return cacheHeights[HomeViewController.cellHeightKey(indexPath)] ?? 0
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

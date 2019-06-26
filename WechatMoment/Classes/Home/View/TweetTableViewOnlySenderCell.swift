@@ -34,16 +34,12 @@ class TweetTableViewOnlySenderCell: UITableViewCell {
             iconView.image = nil
         }
         nameLabel.text = model.sender?.nick
-        var currentRowHeight =  nameLabel.frame.maxY + 10
         if let commets = model.comments {
             commentView.configData(commets)
             commentHeight.constant = commentView.frame.size.height
-            currentRowHeight =  commentView.frame.maxY + 10
         } else {
             commentHeight.constant = 0
         }
-        tweet?.rowHegight = currentRowHeight
-        layoutIfNeeded()
         
     }
 }

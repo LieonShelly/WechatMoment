@@ -14,12 +14,12 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       let url = URL(string: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/008.jpeg")!
+        let url = URL(string: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/008.jpeg")!
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main)
-       let task = session.downloadTask(with: URLRequest(url: url))
-       task.resume()
-       view.backgroundColor = .white
-        
+        let task = session.downloadTask(with: URLRequest(url: url))
+        task.resume()
+        view.backgroundColor = .white
+
         let btn = UIButton(type: .contactAdd)
         btn.frame = CGRect(x: 100, y: 100, width: 40, height: 40)
         view.addSubview(btn)
