@@ -25,6 +25,9 @@ class TweetTableViewCell: UITableViewCell {
         super.awakeFromNib()
         iconView.layer.cornerRadius  = 5
         iconView.layer.masksToBounds = true
+        let longpress = UILongPressGestureRecognizer(target: self, action: #selector(self.longpressAction(_:)))
+        contentLabel.isUserInteractionEnabled = true
+        contentLabel.addGestureRecognizer(longpress)
     }
     
     func config(_ model: Tweet) {
@@ -134,5 +137,39 @@ class TweetTableViewCell: UITableViewCell {
                 commentViewTop + commentViewHeight + commentViewBottom + 0.5
         }
         return rowHeight
+    }
+}
+
+
+extension TweetTableViewCell {
+    @objc fileprivate func longpressAction(_ ges: UILongPressGestureRecognizer) {
+        if ges.state == .began {
+            becomeFirstResponder()
+            contentLabel.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            let frame: CGRect = convert(contentLabel.frame, to: self)
+            let menuFrame = CGRect(x: frame.origin.x + frame.width * 0.5, y: frame.origin.y, width: 40, height: 40)
+            let copyItem = UIMenuItem(title: "拷贝", action: #selector(self.copyAction))
+            UIMenuController.shared.menuItems = [copyItem]
+            UIMenuController.shared.setTargetRect(menuFrame, in: self)
+            UIMenuController.shared.setMenuVisible(true, animated: true)
+        }
+    }
+    
+    @objc fileprivate func copyAction() {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = contentLabel.text
+        contentLabel.backgroundColor = UIColor.white
+        UIMenuController.shared.setMenuVisible(false, animated: true)
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if action == #selector(self.copyAction) {
+            return true
+        }
+        return false
     }
 }
