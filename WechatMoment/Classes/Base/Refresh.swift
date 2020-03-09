@@ -56,8 +56,8 @@ class RefreshHeader: MJRefreshStateHeader {
     
     override func prepare() {
         super.prepare()
-        stateLabel.isHidden = true
-        lastUpdatedTimeLabel.isHidden = true
+        stateLabel?.isHidden = true
+        lastUpdatedTimeLabel?.isHidden = true
         mj_h = 50
         activityView.color = UIColor.theme
         addSubview(activityView)
@@ -128,15 +128,15 @@ extension Reactive where Base: UIScrollView {
         return Binder<RefreshStatus>(base, scheduler: MainScheduler.instance, binding: { (control, value) in
             switch value {
             case .beingHeaderRefresh:
-                control.mj_header.beginRefreshing()
+                control.mj_header?.beginRefreshing()
             case .endHeaderRefresh:
                 control.mj_header?.endRefreshing()
             case .beingFooterRefresh:
-                control.mj_footer.beginRefreshing()
+                control.mj_footer?.beginRefreshing()
             case .endFooterRefresh:
-                control.mj_footer.endRefreshing()
+                control.mj_footer?.endRefreshing()
             case .noMoreData:
-                control.mj_footer.endRefreshingWithNoMoreData()
+                control.mj_footer?.endRefreshingWithNoMoreData()
             default:
                 break
             }

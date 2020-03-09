@@ -64,7 +64,6 @@ class HomeViewController: UIViewController {
                     cell.config(item)
                     if let weakSelf = self {
                            let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
-                        debugPrint("cell-height:\(height)")
                         weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
                     }
                     return cell
@@ -74,7 +73,6 @@ class HomeViewController: UIViewController {
                     cell.config(item)
                     if let weakSelf = self {
                         let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
-                        debugPrint("cell-height:\(height)")
                         weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
                     }
                      return cell
@@ -84,7 +82,6 @@ class HomeViewController: UIViewController {
                     cell.selectionStyle = .none
                     if let weakSelf = self {
                         let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
-                        debugPrint("cell-height:\(height)")
                         weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
                     }
                     return cell
@@ -94,7 +91,6 @@ class HomeViewController: UIViewController {
                     cell.selectionStyle = .none
                     if let weakSelf = self {
                         let height = cell.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: 0), withHorizontalFittingPriority: UILayoutPriority.required, verticalFittingPriority: .fittingSizeLevel).height
-                        debugPrint("cell-height:\(height)")
                         weakSelf.cacheHeights[HomeViewController.cellHeightKey(indexPath)] = height
                     }
                     return cell
@@ -126,11 +122,6 @@ class HomeViewController: UIViewController {
         tableView.mj_footer = RefreshFooter(refreshingBlock: {
             viewModel.refreshInput.on(.next(false))
         })
-        
-        viewModel.laodingDriver
-            .asDriver(onErrorJustReturn: false)
-            .drive(HUD.loading)
-            .disposed(by: bag)
         
         viewModel.refreshStatus
             .bind(to: tableView.rx.mj_RefreshStatus)
@@ -194,7 +185,6 @@ extension HomeViewController: UITableViewDelegate {
         if b <= 1 {
             let alpha = 1 - b
             navView.alpha = alpha
-            print("scrollViewDidScroll:\(scrollView.contentOffset.y) - alpha: \(alpha)")
         } else {
             navView.alpha = 0
         }

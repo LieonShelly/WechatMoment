@@ -120,7 +120,6 @@ class MomentRefreshView: UIView {
     
     fileprivate func update(_ offsetY: CGFloat) {
         var offsetY = offsetY
-        debugPrint("update-offsetY:\(offsetY)")
         if offsetY < UISize.minOffsetY {
             offsetY = UISize.minOffsetY
         }

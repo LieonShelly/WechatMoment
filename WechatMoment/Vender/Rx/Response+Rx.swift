@@ -10,9 +10,8 @@ import Moya
 import RxSwift
 import RxCocoa
 import HandyJSON
-import CryptoSwift
 
-extension ObservableType where E == Response {
+extension ObservableType where Element == Response {
     
     func model<T: HandyJSON>(_ type: T.Type) -> Observable<T> {
         return flatMap{
@@ -91,12 +90,8 @@ extension Response {
         guard let rawJson = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: Any]?] else {
             throw MoyaError.jsonMapping(self)
         }
-        
-        guard let jsonArray = rawJson else {
-            throw MoyaError.jsonMapping(self)
-        }
         var response: [T] = []
-        for objJson in jsonArray {
+        for objJson in rawJson {
             if let obj = JSONDeserializer<T>.deserializeFrom(dict: objJson) {
                 response.append(obj)
             }

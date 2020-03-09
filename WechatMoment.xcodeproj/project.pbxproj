@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1B501CF6EC510A0D70E182 /* Pods_WechatMoment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF6EEF3BD2A348D3BE87FAC /* Pods_WechatMoment.framework */; };
 		CD1BF24222B3A4CC005DB838 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF24022B3A4CC005DB838 /* HomeViewController.swift */; };
 		CD1BF24322B3A4CC005DB838 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1BF24122B3A4CC005DB838 /* HomeViewController.xib */; };
 		CD1BF25822B3A696005DB838 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25422B3A696005DB838 /* CommonData.swift */; };
@@ -16,7 +17,6 @@
 		CD1BF25D22B3A82F005DB838 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25C22B3A82F005DB838 /* HomeViewModel.swift */; };
 		CD1BF26022B3A876005DB838 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF25F22B3A876005DB838 /* Service.swift */; };
 		CD1BF26222B3A9FF005DB838 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BF26122B3A9FF005DB838 /* Home.swift */; };
-		CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */; };
 		CD33A48722B3F1CE00B3B28D /* Response+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */; };
 		CD33A48822B3F1CE00B3B28D /* Observable+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */; };
 		CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */; };
@@ -44,24 +44,6 @@
 		CD7C46C922B6A41500371C77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C622B6A41500371C77 /* UITableViewExtension.swift */; };
 		CD7C46CA22B6A41500371C77 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C722B6A41500371C77 /* UIDeviceExtension.swift */; };
 		CD7C46CB22B6A41500371C77 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C46C822B6A41500371C77 /* StringExtension.swift */; };
-		CD97939422B3A1BF00E0CEE6 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937422B3A1BE00E0CEE6 /* ReactiveMoya.framework */; };
-		CD97939522B3A1BF00E0CEE6 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937522B3A1BE00E0CEE6 /* RxMoya.framework */; };
-		CD97939822B3A1BF00E0CEE6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937822B3A1BE00E0CEE6 /* SnapKit.framework */; };
-		CD97939922B3A1BF00E0CEE6 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937922B3A1BE00E0CEE6 /* Action.framework */; };
-		CD97939B22B3A1BF00E0CEE6 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937B22B3A1BE00E0CEE6 /* PKHUD.framework */; };
-		CD97939D22B3A1BF00E0CEE6 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937D22B3A1BE00E0CEE6 /* RxSwiftExt.framework */; };
-		CD97939E22B3A1BF00E0CEE6 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97937E22B3A1BF00E0CEE6 /* HandyJSON.framework */; };
-		CD9793A222B3A1BF00E0CEE6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938222B3A1BF00E0CEE6 /* Alamofire.framework */; };
-		CD9793A322B3A1BF00E0CEE6 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938322B3A1BF00E0CEE6 /* RxBlocking.framework */; };
-		CD9793A422B3A1BF00E0CEE6 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938422B3A1BF00E0CEE6 /* MJRefresh.framework */; };
-		CD9793A522B3A1BF00E0CEE6 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938522B3A1BF00E0CEE6 /* RxDataSources.framework */; };
-		CD9793A822B3A1BF00E0CEE6 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938822B3A1BF00E0CEE6 /* ReactiveSwift.framework */; };
-		CD9793A922B3A1BF00E0CEE6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938922B3A1BF00E0CEE6 /* Kingfisher.framework */; };
-		CD9793AA22B3A1BF00E0CEE6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938A22B3A1BF00E0CEE6 /* RxSwift.framework */; };
-		CD9793AC22B3A1BF00E0CEE6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938C22B3A1BF00E0CEE6 /* RxCocoa.framework */; };
-		CD9793AD22B3A1BF00E0CEE6 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938D22B3A1BF00E0CEE6 /* Moya.framework */; };
-		CD9793AF22B3A1BF00E0CEE6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97938F22B3A1BF00E0CEE6 /* Result.framework */; };
-		CD9793B122B3A1BF00E0CEE6 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD97939122B3A1BF00E0CEE6 /* Differentiator.framework */; };
 		CDB3F5EF22C113E800FEE48A /* ImageSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5EE22C113E800FEE48A /* ImageSession.swift */; };
 		CDB3F5F122C129B900FEE48A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5F022C129B900FEE48A /* TestViewController.swift */; };
 		CDB3F5F322C12F5600FEE48A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3F5F222C12F5600FEE48A /* Protocol.swift */; };
@@ -72,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4686AD0D08A7D9C360ABAFB4 /* Pods-WechatMoment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatMoment.release.xcconfig"; path = "Target Support Files/Pods-WechatMoment/Pods-WechatMoment.release.xcconfig"; sourceTree = "<group>"; };
+		8FF6EEF3BD2A348D3BE87FAC /* Pods_WechatMoment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WechatMoment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1AC5D3BFA38ED0DF7FCEAD /* Pods-WechatMoment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatMoment.debug.xcconfig"; path = "Target Support Files/Pods-WechatMoment/Pods-WechatMoment.debug.xcconfig"; sourceTree = "<group>"; };
 		CD1BF24022B3A4CC005DB838 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CD1BF24122B3A4CC005DB838 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CD1BF25422B3A696005DB838 /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
@@ -81,7 +66,6 @@
 		CD1BF25C22B3A82F005DB838 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CD1BF25F22B3A876005DB838 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CD1BF26122B3A9FF005DB838 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Rx.swift"; sourceTree = "<group>"; };
 		CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ex.swift"; sourceTree = "<group>"; };
 		CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
@@ -143,30 +127,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD97939422B3A1BF00E0CEE6 /* ReactiveMoya.framework in Frameworks */,
-				CD97939522B3A1BF00E0CEE6 /* RxMoya.framework in Frameworks */,
-				CD97939822B3A1BF00E0CEE6 /* SnapKit.framework in Frameworks */,
-				CD97939922B3A1BF00E0CEE6 /* Action.framework in Frameworks */,
-				CD97939B22B3A1BF00E0CEE6 /* PKHUD.framework in Frameworks */,
-				CD97939D22B3A1BF00E0CEE6 /* RxSwiftExt.framework in Frameworks */,
-				CD97939E22B3A1BF00E0CEE6 /* HandyJSON.framework in Frameworks */,
-				CD9793A222B3A1BF00E0CEE6 /* Alamofire.framework in Frameworks */,
-				CD9793A322B3A1BF00E0CEE6 /* RxBlocking.framework in Frameworks */,
-				CD9793A422B3A1BF00E0CEE6 /* MJRefresh.framework in Frameworks */,
-				CD9793A522B3A1BF00E0CEE6 /* RxDataSources.framework in Frameworks */,
-				CD9793A822B3A1BF00E0CEE6 /* ReactiveSwift.framework in Frameworks */,
-				CD9793A922B3A1BF00E0CEE6 /* Kingfisher.framework in Frameworks */,
-				CD9793AA22B3A1BF00E0CEE6 /* RxSwift.framework in Frameworks */,
-				CD9793AC22B3A1BF00E0CEE6 /* RxCocoa.framework in Frameworks */,
-				CD9793AD22B3A1BF00E0CEE6 /* Moya.framework in Frameworks */,
-				CD9793AF22B3A1BF00E0CEE6 /* Result.framework in Frameworks */,
-				CD9793B122B3A1BF00E0CEE6 /* Differentiator.framework in Frameworks */,
+				3F1B501CF6EC510A0D70E182 /* Pods_WechatMoment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D47CF38D3337CDAA09F4965 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF1AC5D3BFA38ED0DF7FCEAD /* Pods-WechatMoment.debug.xcconfig */,
+				4686AD0D08A7D9C360ABAFB4 /* Pods-WechatMoment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD1BF24422B3A559005DB838 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +202,6 @@
 		CD1BF24B22B3A614005DB838 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
-				CD33A48222B3F1CD00B3B28D /* ActivityIndicator.swift */,
 				CD33A48422B3F1CE00B3B28D /* Observable+Ex.swift */,
 				CD33A48322B3F1CE00B3B28D /* Response+Rx.swift */,
 				CD33A48522B3F1CE00B3B28D /* UIViewController+Rx.swift */,
@@ -293,6 +268,7 @@
 				CD635D7722B39FAF00D0069E /* WechatMoment */,
 				CD635D7622B39FAF00D0069E /* Products */,
 				CD97937322B3A1BE00E0CEE6 /* Frameworks */,
+				0D47CF38D3337CDAA09F4965 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,6 +324,7 @@
 				CD97938A22B3A1BF00E0CEE6 /* RxSwift.framework */,
 				CD97937D22B3A1BE00E0CEE6 /* RxSwiftExt.framework */,
 				CD97937822B3A1BE00E0CEE6 /* SnapKit.framework */,
+				8FF6EEF3BD2A348D3BE87FAC /* Pods_WechatMoment.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -380,10 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD635D8722B39FB300D0069E /* Build configuration list for PBXNativeTarget "WechatMoment" */;
 			buildPhases = (
+				27A13826804B014C588F0128 /* [CP] Check Pods Manifest.lock */,
 				CD635D7122B39FAF00D0069E /* Sources */,
 				CD635D7222B39FAF00D0069E /* Frameworks */,
 				CD635D7322B39FAF00D0069E /* Resources */,
-				CD635D8A22B3A09B00D0069E /* Carthage */,
+				51D2592FBAB1248495BB0825 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -449,7 +427,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CD635D8A22B3A09B00D0069E /* Carthage */ = {
+		27A13826804B014C588F0128 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,33 +435,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/HandyJSON.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwiftExt.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MJRefresh.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = Carthage;
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WechatMoment-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51D2592FBAB1248495BB0825 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WechatMoment/Pods-WechatMoment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WechatMoment/Pods-WechatMoment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WechatMoment/Pods-WechatMoment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -508,7 +489,6 @@
 				CD33A4A522B49B5100B3B28D /* ImageListView.swift in Sources */,
 				CDB3F5EF22C113E800FEE48A /* ImageSession.swift in Sources */,
 				CD33A48922B3F1CE00B3B28D /* UIViewController+Rx.swift in Sources */,
-				CD33A48622B3F1CE00B3B28D /* ActivityIndicator.swift in Sources */,
 				CD1BF25922B3A696005DB838 /* AppResponse.swift in Sources */,
 				CD33A49122B3F46700B3B28D /* TweetTableViewCell.swift in Sources */,
 				CD1BF25A22B3A696005DB838 /* SectionModel.swift in Sources */,
@@ -660,13 +640,11 @@
 		};
 		CD635D8822B39FB300D0069E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1AC5D3BFA38ED0DF7FCEAD /* Pods-WechatMoment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = WechatMoment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,20 +652,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WechatMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CD635D8922B39FB300D0069E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4686AD0D08A7D9C360ABAFB4 /* Pods-WechatMoment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = WechatMoment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,7 +671,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WechatMoment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

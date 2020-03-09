@@ -11,7 +11,7 @@ import RxSwift
 import RxDataSources
 import Moya
 import HandyJSON
-import RxMoya
+//import RxMoya
 import RxCocoa
 
 class HomeViewModel {
@@ -29,15 +29,10 @@ class HomeViewModel {
     
     init() {
         let provider = MoyaProvider<HomeService>()
-        let activity = ActivityIndicator()
         let tweetList: BehaviorRelay<[Tweet]> = BehaviorRelay(value: [])
         let page: BehaviorRelay<Int> = BehaviorRelay(value: 2)
         let exceptionInput: PublishSubject<Bool> = .init()
-        
-        activity.asObservable()
-            .bind(to: laodingDriver)
-            .disposed(by: bag)
-        
+
         Observable.merge(viewDidLoad.asObservable(),
                          refreshInput.asObservable().filter { $0 == true}.mapToVoid(),
                          exceptionInput.asObservable().filter { $0 == true}.mapToVoid())
@@ -59,10 +54,9 @@ class HomeViewModel {
                     .modelWithArray(Tweet.self)
                     .asObservable()
                     .catchError {_ in Observable.never()}
-                    .trackActivity(activity)
             }
             .map({ (serverData) -> [Tweet] in
-                let normalData = serverData.filter { $0.error == nil}.filter { $0.unknownError == nil}.filter { $0.unknownError == nil}.filter { $0.content != nil}//.filter { $0.images != nil}
+                let normalData = serverData.filter { $0.error == nil}.filter { $0.unknownError == nil}.filter { $0.content != nil || $0.images != nil}
                 return normalData
             })
             .bind(to: tweetList)
@@ -72,7 +66,7 @@ class HomeViewModel {
         tweetList.asObservable()
             .skip(1)
             .map { (lists) -> [Tweet] in
-                let endIndex = lists.count >= 5 ? 5: lists.count - 1
+                let endIndex = lists.count >= 5 ? 5: lists.count
                 return Array(lists[ 0 ..< endIndex])
             }
             .bind(to: currentTweetList)
@@ -121,7 +115,7 @@ class HomeViewModel {
                 if startIndex >= dataList.count {
                     weakSelf.refreshStatus.accept(RefreshStatus.noMoreData)
                 } else {
-                    endIndex = endIndex >= dataList.count ? dataList.count - 1: endIndex
+                    endIndex = endIndex >= dataList.count ? dataList.count: endIndex
                     let moreData = Array(dataList[startIndex ..< endIndex])
                     var currentListData = weakSelf.currentTweetList.value
                     currentListData.append(contentsOf: moreData)
