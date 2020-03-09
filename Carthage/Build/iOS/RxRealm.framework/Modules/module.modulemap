@@ -1,4 +1,0 @@
-framework module RxRealm {
-  header "RxRealm-Swift.h"
-  requires objc
-}
